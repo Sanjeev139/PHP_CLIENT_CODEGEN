@@ -210,7 +210,7 @@ $apiInstance = new PhpApi\Api\KountRisAppApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$_product_details = new \PhpApi\Model\ProductDetails(); // \PhpApi\Model\ProductDetails | 
+$_product_details = new \PhpApi\Khash\ProductDetails(); // \PhpApi\Khash\ProductDetails | 
 
 try {
     $result = $apiInstance->kountRisAppPost($_product_details);
@@ -225,7 +225,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **_product_details** | [**\PhpApi\Model\ProductDetails**](../Model/ProductDetails.md)|  |
+ **_product_details** | [**\PhpApi\Khash\ProductDetails**](../Model/ProductDetails.md)|  |
 
 ### Return type
 

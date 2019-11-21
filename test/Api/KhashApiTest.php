@@ -72,12 +72,12 @@ class KhashApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for khashGetHashPaymentToken
+     * Test case for khashGetKey
      *
      * .
      *
      */
-    public function testKhashGetHashPaymentToken()
+    public function testKhashGetKey()
     {
     }
 
@@ -88,6 +88,16 @@ class KhashApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testKhashHashGiftCard()
+    {
+    }
+
+    /**
+     * Test case for khashHashPaymentToken
+     *
+     * .
+     *
+     */
+    public function testKhashHashPaymentToken()
     {
     }
 }

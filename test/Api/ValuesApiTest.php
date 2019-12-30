@@ -1,6 +1,6 @@
 <?php
 /**
- * KountRisAppApiTest
+ * ValuesApiTest
  * PHP version 5
  *
  * @category Class
@@ -33,14 +33,14 @@ use \PhpApi\ApiException;
 use \PhpApi\ObjectSerializer;
 
 /**
- * KountRisAppApiTest Class Doc Comment
+ * ValuesApiTest Class Doc Comment
  *
  * @category Class
  * @package  PhpApi
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class KountRisAppApiTest extends \PHPUnit_Framework_TestCase
+class ValuesApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -72,12 +72,52 @@ class KountRisAppApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for kountRisAppPostRis
+     * Test case for valuesDelete
      *
      * .
      *
      */
-    public function testKountRisAppPostRis()
+    public function testValuesDelete()
+    {
+    }
+
+    /**
+     * Test case for valuesGet
+     *
+     * .
+     *
+     */
+    public function testValuesGet()
+    {
+    }
+
+    /**
+     * Test case for valuesGet_0
+     *
+     * .
+     *
+     */
+    public function testValuesGet0()
+    {
+    }
+
+    /**
+     * Test case for valuesPost
+     *
+     * .
+     *
+     */
+    public function testValuesPost()
+    {
+    }
+
+    /**
+     * Test case for valuesPut
+     *
+     * .
+     *
+     */
+    public function testValuesPut()
     {
     }
 }

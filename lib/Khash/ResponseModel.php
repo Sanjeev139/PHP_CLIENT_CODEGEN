@@ -57,65 +57,87 @@ class ResponseModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'ris_response' => 'string',
-        'ris_vers' => 'string',
+        'get_response' => 'string',
+        'ris_error_code' => 'string',
+        'ris_version' => 'string',
         'ris_mode' => 'string',
-        'ris_merc' => 'string',
-        'ris_sess' => 'string',
-        'ris_ordr' => 'string',
+        'ris_transaction_id' => 'string',
+        'ris_merchant_id' => 'string',
+        'ris_session_id' => 'string',
+        'ris_order_number' => 'string',
         'ris_auto' => 'string',
-        'ris_scor' => 'string',
+        'ris_reason' => 'string',
+        'ris_reason_code' => 'string',
+        'ris_score' => 'string',
+        'ris_omniscore' => 'string',
         'ris_geox' => 'string',
-        'ris_brnd' => 'string',
-        'ris_regn' => 'string',
-        'ris_netw' => 'string',
-        'ris_kapt' => 'string',
-        'ris_cards' => 'string',
-        'ris_devices' => 'string',
-        'ris_emails' => 'string',
+        'ris_brand' => 'string',
         'ris_velo' => 'string',
         'ris_vmax' => 'string',
-        'ris_site' => 'string',
-        'ris_device_layers' => 'string',
-        'ris_fingerprint' => 'string',
-        'ris_timezone' => 'string',
-        'ris_localtime' => 'string',
+        'ris_network' => 'string',
+        'ris_know_your_customer' => 'string',
         'ris_region' => 'string',
-        'ris_country' => 'string',
+        'ris_kaptcha' => 'string',
         'ris_proxy' => 'string',
-        'ris_javascript' => 'string',
-        'ris_flash' => 'string',
-        'ris_cookies' => 'string',
+        'ris_emails' => 'string',
         'ris_http_country' => 'string',
-        'ris_language' => 'string',
-        'ris_mobile_device' => 'string',
-        'ris_mobile_type' => 'string',
+        'ris_time_zone' => 'string',
+        'ris_cards' => 'string',
+        'ris_pc_remote' => 'string',
+        'ris_devices' => 'string',
+        'ris_device_layers' => 'string',
         'ris_mobile_forwarder' => 'string',
         'ris_voice_device' => 'string',
-        'ris_pc_remote' => 'string',
-        'ris_rules_triggered' => 'string',
-        'ris_counters_triggered' => 'string',
-        'ris_reason_code' => 'string',
-        'ris_ddfs' => 'string',
-        'ris_dsr' => 'string',
-        'ris_uas' => 'string',
-        'ris_browser' => 'string',
+        'ris_local_time' => 'string',
+        'ris_mobile_type' => 'string',
+        'ris_finger_print' => 'string',
+        'ris_flash' => 'string',
+        'ris_language' => 'string',
+        'ris_country' => 'string',
+        'ris_java_script' => 'string',
+        'ris_cookies' => 'string',
+        'ris_mobile_device' => 'string',
+        'ris_site' => 'string',
+        'ris_master_card_fraud_score' => 'string',
+        'ris_pierced_ip_address' => 'string',
+        'ris_pierced_ip_address_latitude' => 'string',
+        'ris_pierced_ip_address_longitude' => 'string',
+        'ris_pierced_ip_address_country' => 'string',
+        'ris_pierced_ip_address_region' => 'string',
+        'ris_pierced_ip_address_city' => 'string',
+        'ris_pierced_ip_address_organization' => 'string',
+        'ris_ip_address' => 'string',
+        'ris_ip_address_latitude' => 'string',
+        'ris_ip_address_longitude' => 'string',
+        'ris_ip_address_country' => 'string',
+        'ris_ip_address_region' => 'string',
+        'ris_ip_address_city' => 'string',
+        'ris_ip_address_organization' => 'string',
+        'ris_date_device_first_seen' => 'string',
+        'ris_user_agent_string' => 'string',
+        'ris_device_screen_resolution' => 'string',
         'ris_os' => 'string',
-        'ris_pip_ipad' => 'string',
-        'ris_pip_lat' => 'string',
-        'ris_pip_lon' => 'string',
-        'ris_pip_country' => 'string',
-        'ris_pip_region' => 'string',
-        'ris_pip_city' => 'string',
-        'ris_pip_org' => 'string',
-        'ris_ip_ipad' => 'string',
-        'ris_ip_lat' => 'string',
-        'ris_ip_lon' => 'string',
-        'ris_ip_country' => 'string',
-        'ris_ip_region' => 'string',
-        'ris_ip_city' => 'string',
-        'ris_ip_org' => 'string',
-        'ris_warning_count' => 'string'
+        'ris_browser' => 'string',
+        'ris_to_string' => 'string',
+        'rules_triggered' => 'map[string,object]',
+        'ris_number_rules_triggered' => 'int',
+        'ris_warnings' => 'string[]',
+        'ris_warning_count' => 'int',
+        'ris_errors' => 'string[]',
+        'ris_error_count' => 'int',
+        'has_errors' => 'bool',
+        'ris_lexis_nexis_cbd_attributes' => 'map[string,object]',
+        'ris_lexis_nexis_instant_id_attributes' => 'map[string,object]',
+        'ris_counters_triggered' => 'map[string,object]',
+        'ris_number_counters_triggered' => 'int',
+        'ris_kount_central_customer_id' => 'string',
+        'ris_kount_central_warnings' => 'string[]',
+        'ris_kount_central_warning_count' => 'int',
+        'ris_kount_central_errors' => 'string[]',
+        'ris_kount_central_error_count' => 'int',
+        'ris_kount_central_number_thresholds_triggered' => 'int',
+        'ris_kount_central_decision' => 'string',
+        'kount_central_threshold_events' => '\PhpApi\Khash\KcEvent[]'
     ];
 
     /**
@@ -124,65 +146,87 @@ class ResponseModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'ris_response' => null,
-        'ris_vers' => null,
+        'get_response' => null,
+        'ris_error_code' => null,
+        'ris_version' => null,
         'ris_mode' => null,
-        'ris_merc' => null,
-        'ris_sess' => null,
-        'ris_ordr' => null,
+        'ris_transaction_id' => null,
+        'ris_merchant_id' => null,
+        'ris_session_id' => null,
+        'ris_order_number' => null,
         'ris_auto' => null,
-        'ris_scor' => null,
+        'ris_reason' => null,
+        'ris_reason_code' => null,
+        'ris_score' => null,
+        'ris_omniscore' => null,
         'ris_geox' => null,
-        'ris_brnd' => null,
-        'ris_regn' => null,
-        'ris_netw' => null,
-        'ris_kapt' => null,
-        'ris_cards' => null,
-        'ris_devices' => null,
-        'ris_emails' => null,
+        'ris_brand' => null,
         'ris_velo' => null,
         'ris_vmax' => null,
-        'ris_site' => null,
-        'ris_device_layers' => null,
-        'ris_fingerprint' => null,
-        'ris_timezone' => null,
-        'ris_localtime' => null,
+        'ris_network' => null,
+        'ris_know_your_customer' => null,
         'ris_region' => null,
-        'ris_country' => null,
+        'ris_kaptcha' => null,
         'ris_proxy' => null,
-        'ris_javascript' => null,
-        'ris_flash' => null,
-        'ris_cookies' => null,
+        'ris_emails' => null,
         'ris_http_country' => null,
-        'ris_language' => null,
-        'ris_mobile_device' => null,
-        'ris_mobile_type' => null,
+        'ris_time_zone' => null,
+        'ris_cards' => null,
+        'ris_pc_remote' => null,
+        'ris_devices' => null,
+        'ris_device_layers' => null,
         'ris_mobile_forwarder' => null,
         'ris_voice_device' => null,
-        'ris_pc_remote' => null,
-        'ris_rules_triggered' => null,
-        'ris_counters_triggered' => null,
-        'ris_reason_code' => null,
-        'ris_ddfs' => null,
-        'ris_dsr' => null,
-        'ris_uas' => null,
-        'ris_browser' => null,
+        'ris_local_time' => null,
+        'ris_mobile_type' => null,
+        'ris_finger_print' => null,
+        'ris_flash' => null,
+        'ris_language' => null,
+        'ris_country' => null,
+        'ris_java_script' => null,
+        'ris_cookies' => null,
+        'ris_mobile_device' => null,
+        'ris_site' => null,
+        'ris_master_card_fraud_score' => null,
+        'ris_pierced_ip_address' => null,
+        'ris_pierced_ip_address_latitude' => null,
+        'ris_pierced_ip_address_longitude' => null,
+        'ris_pierced_ip_address_country' => null,
+        'ris_pierced_ip_address_region' => null,
+        'ris_pierced_ip_address_city' => null,
+        'ris_pierced_ip_address_organization' => null,
+        'ris_ip_address' => null,
+        'ris_ip_address_latitude' => null,
+        'ris_ip_address_longitude' => null,
+        'ris_ip_address_country' => null,
+        'ris_ip_address_region' => null,
+        'ris_ip_address_city' => null,
+        'ris_ip_address_organization' => null,
+        'ris_date_device_first_seen' => null,
+        'ris_user_agent_string' => null,
+        'ris_device_screen_resolution' => null,
         'ris_os' => null,
-        'ris_pip_ipad' => null,
-        'ris_pip_lat' => null,
-        'ris_pip_lon' => null,
-        'ris_pip_country' => null,
-        'ris_pip_region' => null,
-        'ris_pip_city' => null,
-        'ris_pip_org' => null,
-        'ris_ip_ipad' => null,
-        'ris_ip_lat' => null,
-        'ris_ip_lon' => null,
-        'ris_ip_country' => null,
-        'ris_ip_region' => null,
-        'ris_ip_city' => null,
-        'ris_ip_org' => null,
-        'ris_warning_count' => null
+        'ris_browser' => null,
+        'ris_to_string' => null,
+        'rules_triggered' => null,
+        'ris_number_rules_triggered' => 'int32',
+        'ris_warnings' => null,
+        'ris_warning_count' => 'int32',
+        'ris_errors' => null,
+        'ris_error_count' => 'int32',
+        'has_errors' => null,
+        'ris_lexis_nexis_cbd_attributes' => null,
+        'ris_lexis_nexis_instant_id_attributes' => null,
+        'ris_counters_triggered' => null,
+        'ris_number_counters_triggered' => 'int32',
+        'ris_kount_central_customer_id' => null,
+        'ris_kount_central_warnings' => null,
+        'ris_kount_central_warning_count' => 'int32',
+        'ris_kount_central_errors' => null,
+        'ris_kount_central_error_count' => 'int32',
+        'ris_kount_central_number_thresholds_triggered' => 'int32',
+        'ris_kount_central_decision' => null,
+        'kount_central_threshold_events' => null
     ];
 
     /**
@@ -212,65 +256,87 @@ class ResponseModel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'ris_response' => 'RisResponse',
-        'ris_vers' => 'risVERS',
-        'ris_mode' => 'risMODE',
-        'ris_merc' => 'risMERC',
-        'ris_sess' => 'risSESS',
-        'ris_ordr' => 'risORDR',
+        'get_response' => 'GetResponse',
+        'ris_error_code' => 'risErrorCode',
+        'ris_version' => 'risVersion',
+        'ris_mode' => 'risMode',
+        'ris_transaction_id' => 'risTransactionId',
+        'ris_merchant_id' => 'risMerchantId',
+        'ris_session_id' => 'risSessionId',
+        'ris_order_number' => 'risOrderNumber',
         'ris_auto' => 'risAUTO',
-        'ris_scor' => 'risSCOR',
-        'ris_geox' => 'risGEOX',
-        'ris_brnd' => 'risBRND',
-        'ris_regn' => 'risREGN',
-        'ris_netw' => 'risNETW',
-        'ris_kapt' => 'risKAPT',
-        'ris_cards' => 'risCARDS',
-        'ris_devices' => 'risDEVICES',
-        'ris_emails' => 'risEMAILS',
-        'ris_velo' => 'risVELO',
-        'ris_vmax' => 'risVMAX',
-        'ris_site' => 'risSITE',
-        'ris_device_layers' => 'risDEVICE_LAYERS',
-        'ris_fingerprint' => 'risFINGERPRINT',
-        'ris_timezone' => 'risTIMEZONE',
-        'ris_localtime' => 'risLOCALTIME',
-        'ris_region' => 'risREGION',
-        'ris_country' => 'risCOUNTRY',
-        'ris_proxy' => 'risPROXY',
-        'ris_javascript' => 'risJAVASCRIPT',
-        'ris_flash' => 'risFLASH',
-        'ris_cookies' => 'risCOOKIES',
-        'ris_http_country' => 'risHTTP_COUNTRY',
-        'ris_language' => 'risLANGUAGE',
-        'ris_mobile_device' => 'risMOBILE_DEVICE',
-        'ris_mobile_type' => 'risMOBILE_TYPE',
-        'ris_mobile_forwarder' => 'risMOBILE_FORWARDER',
-        'ris_voice_device' => 'risVOICE_DEVICE',
-        'ris_pc_remote' => 'risPC_REMOTE',
-        'ris_rules_triggered' => 'risRULES_TRIGGERED',
-        'ris_counters_triggered' => 'risCOUNTERS_TRIGGERED',
-        'ris_reason_code' => 'risREASON_CODE',
-        'ris_ddfs' => 'risDDFS',
-        'ris_dsr' => 'risDSR',
-        'ris_uas' => 'risUAS',
-        'ris_browser' => 'risBROWSER',
+        'ris_reason' => 'risReason',
+        'ris_reason_code' => 'risReasonCode',
+        'ris_score' => 'risScore',
+        'ris_omniscore' => 'risOmniscore',
+        'ris_geox' => 'risGeox',
+        'ris_brand' => 'risBrand',
+        'ris_velo' => 'risVelo',
+        'ris_vmax' => 'risVmax',
+        'ris_network' => 'risNetwork',
+        'ris_know_your_customer' => 'risKnowYourCustomer',
+        'ris_region' => 'risRegion',
+        'ris_kaptcha' => 'risKaptcha',
+        'ris_proxy' => 'risProxy',
+        'ris_emails' => 'risEmails',
+        'ris_http_country' => 'risHttpCountry',
+        'ris_time_zone' => 'risTimeZone',
+        'ris_cards' => 'risCards',
+        'ris_pc_remote' => 'risPcRemote',
+        'ris_devices' => 'risDevices',
+        'ris_device_layers' => 'risDeviceLayers',
+        'ris_mobile_forwarder' => 'risMobileForwarder',
+        'ris_voice_device' => 'risVoiceDevice',
+        'ris_local_time' => 'risLocalTime',
+        'ris_mobile_type' => 'risMobileType',
+        'ris_finger_print' => 'risFingerPrint',
+        'ris_flash' => 'risFlash',
+        'ris_language' => 'risLanguage',
+        'ris_country' => 'risCountry',
+        'ris_java_script' => 'risJavaScript',
+        'ris_cookies' => 'risCookies',
+        'ris_mobile_device' => 'risMobileDevice',
+        'ris_site' => 'risSite',
+        'ris_master_card_fraud_score' => 'risMasterCardFraudScore',
+        'ris_pierced_ip_address' => 'risPiercedIPAddress',
+        'ris_pierced_ip_address_latitude' => 'risPiercedIPAddressLatitude',
+        'ris_pierced_ip_address_longitude' => 'risPiercedIPAddressLongitude',
+        'ris_pierced_ip_address_country' => 'risPiercedIPAddressCountry',
+        'ris_pierced_ip_address_region' => 'risPiercedIPAddressRegion',
+        'ris_pierced_ip_address_city' => 'risPiercedIPAddressCity',
+        'ris_pierced_ip_address_organization' => 'risPiercedIPAddressOrganization',
+        'ris_ip_address' => 'risIPAddress',
+        'ris_ip_address_latitude' => 'risIPAddressLatitude',
+        'ris_ip_address_longitude' => 'risIPAddressLongitude',
+        'ris_ip_address_country' => 'risIPAddressCountry',
+        'ris_ip_address_region' => 'risIPAddressRegion',
+        'ris_ip_address_city' => 'risIPAddressCity',
+        'ris_ip_address_organization' => 'risIPAddressOrganization',
+        'ris_date_device_first_seen' => 'risDateDeviceFirstSeen',
+        'ris_user_agent_string' => 'risUserAgentString',
+        'ris_device_screen_resolution' => 'risDeviceScreenResolution',
         'ris_os' => 'risOS',
-        'ris_pip_ipad' => 'risPIP_IPAD',
-        'ris_pip_lat' => 'risPIP_LAT',
-        'ris_pip_lon' => 'risPIP_LON',
-        'ris_pip_country' => 'risPIP_COUNTRY',
-        'ris_pip_region' => 'risPIP_REGION',
-        'ris_pip_city' => 'risPIP_CITY',
-        'ris_pip_org' => 'risPIP_ORG',
-        'ris_ip_ipad' => 'risIP_IPAD',
-        'ris_ip_lat' => 'risIP_LAT',
-        'ris_ip_lon' => 'risIP_LON',
-        'ris_ip_country' => 'risIP_COUNTRY',
-        'ris_ip_region' => 'risIP_REGION',
-        'ris_ip_city' => 'risIP_CITY',
-        'ris_ip_org' => 'risIP_ORG',
-        'ris_warning_count' => 'risWARNING_COUNT'
+        'ris_browser' => 'risBrowser',
+        'ris_to_string' => 'risToString',
+        'rules_triggered' => 'RulesTriggered',
+        'ris_number_rules_triggered' => 'risNumberRulesTriggered',
+        'ris_warnings' => 'risWarnings',
+        'ris_warning_count' => 'risWarningCount',
+        'ris_errors' => 'risErrors',
+        'ris_error_count' => 'risErrorCount',
+        'has_errors' => 'HasErrors',
+        'ris_lexis_nexis_cbd_attributes' => 'risLexisNexisCbdAttributes',
+        'ris_lexis_nexis_instant_id_attributes' => 'risLexisNexisInstantIdAttributes',
+        'ris_counters_triggered' => 'risCountersTriggered',
+        'ris_number_counters_triggered' => 'risNumberCountersTriggered',
+        'ris_kount_central_customer_id' => 'risKountCentralCustomerId',
+        'ris_kount_central_warnings' => 'risKountCentralWarnings',
+        'ris_kount_central_warning_count' => 'risKountCentralWarningCount',
+        'ris_kount_central_errors' => 'risKountCentralErrors',
+        'ris_kount_central_error_count' => 'risKountCentralErrorCount',
+        'ris_kount_central_number_thresholds_triggered' => 'risKountCentralNumberThresholdsTriggered',
+        'ris_kount_central_decision' => 'risKountCentralDecision',
+        'kount_central_threshold_events' => 'KountCentralThresholdEvents'
     ];
 
     /**
@@ -279,65 +345,87 @@ class ResponseModel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'ris_response' => 'setRisResponse',
-        'ris_vers' => 'setRisVers',
+        'get_response' => 'setGetResponse',
+        'ris_error_code' => 'setRisErrorCode',
+        'ris_version' => 'setRisVersion',
         'ris_mode' => 'setRisMode',
-        'ris_merc' => 'setRisMerc',
-        'ris_sess' => 'setRisSess',
-        'ris_ordr' => 'setRisOrdr',
+        'ris_transaction_id' => 'setRisTransactionId',
+        'ris_merchant_id' => 'setRisMerchantId',
+        'ris_session_id' => 'setRisSessionId',
+        'ris_order_number' => 'setRisOrderNumber',
         'ris_auto' => 'setRisAuto',
-        'ris_scor' => 'setRisScor',
+        'ris_reason' => 'setRisReason',
+        'ris_reason_code' => 'setRisReasonCode',
+        'ris_score' => 'setRisScore',
+        'ris_omniscore' => 'setRisOmniscore',
         'ris_geox' => 'setRisGeox',
-        'ris_brnd' => 'setRisBrnd',
-        'ris_regn' => 'setRisRegn',
-        'ris_netw' => 'setRisNetw',
-        'ris_kapt' => 'setRisKapt',
-        'ris_cards' => 'setRisCards',
-        'ris_devices' => 'setRisDevices',
-        'ris_emails' => 'setRisEmails',
+        'ris_brand' => 'setRisBrand',
         'ris_velo' => 'setRisVelo',
         'ris_vmax' => 'setRisVmax',
-        'ris_site' => 'setRisSite',
-        'ris_device_layers' => 'setRisDeviceLayers',
-        'ris_fingerprint' => 'setRisFingerprint',
-        'ris_timezone' => 'setRisTimezone',
-        'ris_localtime' => 'setRisLocaltime',
+        'ris_network' => 'setRisNetwork',
+        'ris_know_your_customer' => 'setRisKnowYourCustomer',
         'ris_region' => 'setRisRegion',
-        'ris_country' => 'setRisCountry',
+        'ris_kaptcha' => 'setRisKaptcha',
         'ris_proxy' => 'setRisProxy',
-        'ris_javascript' => 'setRisJavascript',
-        'ris_flash' => 'setRisFlash',
-        'ris_cookies' => 'setRisCookies',
+        'ris_emails' => 'setRisEmails',
         'ris_http_country' => 'setRisHttpCountry',
-        'ris_language' => 'setRisLanguage',
-        'ris_mobile_device' => 'setRisMobileDevice',
-        'ris_mobile_type' => 'setRisMobileType',
+        'ris_time_zone' => 'setRisTimeZone',
+        'ris_cards' => 'setRisCards',
+        'ris_pc_remote' => 'setRisPcRemote',
+        'ris_devices' => 'setRisDevices',
+        'ris_device_layers' => 'setRisDeviceLayers',
         'ris_mobile_forwarder' => 'setRisMobileForwarder',
         'ris_voice_device' => 'setRisVoiceDevice',
-        'ris_pc_remote' => 'setRisPcRemote',
-        'ris_rules_triggered' => 'setRisRulesTriggered',
-        'ris_counters_triggered' => 'setRisCountersTriggered',
-        'ris_reason_code' => 'setRisReasonCode',
-        'ris_ddfs' => 'setRisDdfs',
-        'ris_dsr' => 'setRisDsr',
-        'ris_uas' => 'setRisUas',
-        'ris_browser' => 'setRisBrowser',
+        'ris_local_time' => 'setRisLocalTime',
+        'ris_mobile_type' => 'setRisMobileType',
+        'ris_finger_print' => 'setRisFingerPrint',
+        'ris_flash' => 'setRisFlash',
+        'ris_language' => 'setRisLanguage',
+        'ris_country' => 'setRisCountry',
+        'ris_java_script' => 'setRisJavaScript',
+        'ris_cookies' => 'setRisCookies',
+        'ris_mobile_device' => 'setRisMobileDevice',
+        'ris_site' => 'setRisSite',
+        'ris_master_card_fraud_score' => 'setRisMasterCardFraudScore',
+        'ris_pierced_ip_address' => 'setRisPiercedIpAddress',
+        'ris_pierced_ip_address_latitude' => 'setRisPiercedIpAddressLatitude',
+        'ris_pierced_ip_address_longitude' => 'setRisPiercedIpAddressLongitude',
+        'ris_pierced_ip_address_country' => 'setRisPiercedIpAddressCountry',
+        'ris_pierced_ip_address_region' => 'setRisPiercedIpAddressRegion',
+        'ris_pierced_ip_address_city' => 'setRisPiercedIpAddressCity',
+        'ris_pierced_ip_address_organization' => 'setRisPiercedIpAddressOrganization',
+        'ris_ip_address' => 'setRisIpAddress',
+        'ris_ip_address_latitude' => 'setRisIpAddressLatitude',
+        'ris_ip_address_longitude' => 'setRisIpAddressLongitude',
+        'ris_ip_address_country' => 'setRisIpAddressCountry',
+        'ris_ip_address_region' => 'setRisIpAddressRegion',
+        'ris_ip_address_city' => 'setRisIpAddressCity',
+        'ris_ip_address_organization' => 'setRisIpAddressOrganization',
+        'ris_date_device_first_seen' => 'setRisDateDeviceFirstSeen',
+        'ris_user_agent_string' => 'setRisUserAgentString',
+        'ris_device_screen_resolution' => 'setRisDeviceScreenResolution',
         'ris_os' => 'setRisOs',
-        'ris_pip_ipad' => 'setRisPipIpad',
-        'ris_pip_lat' => 'setRisPipLat',
-        'ris_pip_lon' => 'setRisPipLon',
-        'ris_pip_country' => 'setRisPipCountry',
-        'ris_pip_region' => 'setRisPipRegion',
-        'ris_pip_city' => 'setRisPipCity',
-        'ris_pip_org' => 'setRisPipOrg',
-        'ris_ip_ipad' => 'setRisIpIpad',
-        'ris_ip_lat' => 'setRisIpLat',
-        'ris_ip_lon' => 'setRisIpLon',
-        'ris_ip_country' => 'setRisIpCountry',
-        'ris_ip_region' => 'setRisIpRegion',
-        'ris_ip_city' => 'setRisIpCity',
-        'ris_ip_org' => 'setRisIpOrg',
-        'ris_warning_count' => 'setRisWarningCount'
+        'ris_browser' => 'setRisBrowser',
+        'ris_to_string' => 'setRisToString',
+        'rules_triggered' => 'setRulesTriggered',
+        'ris_number_rules_triggered' => 'setRisNumberRulesTriggered',
+        'ris_warnings' => 'setRisWarnings',
+        'ris_warning_count' => 'setRisWarningCount',
+        'ris_errors' => 'setRisErrors',
+        'ris_error_count' => 'setRisErrorCount',
+        'has_errors' => 'setHasErrors',
+        'ris_lexis_nexis_cbd_attributes' => 'setRisLexisNexisCbdAttributes',
+        'ris_lexis_nexis_instant_id_attributes' => 'setRisLexisNexisInstantIdAttributes',
+        'ris_counters_triggered' => 'setRisCountersTriggered',
+        'ris_number_counters_triggered' => 'setRisNumberCountersTriggered',
+        'ris_kount_central_customer_id' => 'setRisKountCentralCustomerId',
+        'ris_kount_central_warnings' => 'setRisKountCentralWarnings',
+        'ris_kount_central_warning_count' => 'setRisKountCentralWarningCount',
+        'ris_kount_central_errors' => 'setRisKountCentralErrors',
+        'ris_kount_central_error_count' => 'setRisKountCentralErrorCount',
+        'ris_kount_central_number_thresholds_triggered' => 'setRisKountCentralNumberThresholdsTriggered',
+        'ris_kount_central_decision' => 'setRisKountCentralDecision',
+        'kount_central_threshold_events' => 'setKountCentralThresholdEvents'
     ];
 
     /**
@@ -346,65 +434,87 @@ class ResponseModel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'ris_response' => 'getRisResponse',
-        'ris_vers' => 'getRisVers',
+        'get_response' => 'getGetResponse',
+        'ris_error_code' => 'getRisErrorCode',
+        'ris_version' => 'getRisVersion',
         'ris_mode' => 'getRisMode',
-        'ris_merc' => 'getRisMerc',
-        'ris_sess' => 'getRisSess',
-        'ris_ordr' => 'getRisOrdr',
+        'ris_transaction_id' => 'getRisTransactionId',
+        'ris_merchant_id' => 'getRisMerchantId',
+        'ris_session_id' => 'getRisSessionId',
+        'ris_order_number' => 'getRisOrderNumber',
         'ris_auto' => 'getRisAuto',
-        'ris_scor' => 'getRisScor',
+        'ris_reason' => 'getRisReason',
+        'ris_reason_code' => 'getRisReasonCode',
+        'ris_score' => 'getRisScore',
+        'ris_omniscore' => 'getRisOmniscore',
         'ris_geox' => 'getRisGeox',
-        'ris_brnd' => 'getRisBrnd',
-        'ris_regn' => 'getRisRegn',
-        'ris_netw' => 'getRisNetw',
-        'ris_kapt' => 'getRisKapt',
-        'ris_cards' => 'getRisCards',
-        'ris_devices' => 'getRisDevices',
-        'ris_emails' => 'getRisEmails',
+        'ris_brand' => 'getRisBrand',
         'ris_velo' => 'getRisVelo',
         'ris_vmax' => 'getRisVmax',
-        'ris_site' => 'getRisSite',
-        'ris_device_layers' => 'getRisDeviceLayers',
-        'ris_fingerprint' => 'getRisFingerprint',
-        'ris_timezone' => 'getRisTimezone',
-        'ris_localtime' => 'getRisLocaltime',
+        'ris_network' => 'getRisNetwork',
+        'ris_know_your_customer' => 'getRisKnowYourCustomer',
         'ris_region' => 'getRisRegion',
-        'ris_country' => 'getRisCountry',
+        'ris_kaptcha' => 'getRisKaptcha',
         'ris_proxy' => 'getRisProxy',
-        'ris_javascript' => 'getRisJavascript',
-        'ris_flash' => 'getRisFlash',
-        'ris_cookies' => 'getRisCookies',
+        'ris_emails' => 'getRisEmails',
         'ris_http_country' => 'getRisHttpCountry',
-        'ris_language' => 'getRisLanguage',
-        'ris_mobile_device' => 'getRisMobileDevice',
-        'ris_mobile_type' => 'getRisMobileType',
+        'ris_time_zone' => 'getRisTimeZone',
+        'ris_cards' => 'getRisCards',
+        'ris_pc_remote' => 'getRisPcRemote',
+        'ris_devices' => 'getRisDevices',
+        'ris_device_layers' => 'getRisDeviceLayers',
         'ris_mobile_forwarder' => 'getRisMobileForwarder',
         'ris_voice_device' => 'getRisVoiceDevice',
-        'ris_pc_remote' => 'getRisPcRemote',
-        'ris_rules_triggered' => 'getRisRulesTriggered',
-        'ris_counters_triggered' => 'getRisCountersTriggered',
-        'ris_reason_code' => 'getRisReasonCode',
-        'ris_ddfs' => 'getRisDdfs',
-        'ris_dsr' => 'getRisDsr',
-        'ris_uas' => 'getRisUas',
-        'ris_browser' => 'getRisBrowser',
+        'ris_local_time' => 'getRisLocalTime',
+        'ris_mobile_type' => 'getRisMobileType',
+        'ris_finger_print' => 'getRisFingerPrint',
+        'ris_flash' => 'getRisFlash',
+        'ris_language' => 'getRisLanguage',
+        'ris_country' => 'getRisCountry',
+        'ris_java_script' => 'getRisJavaScript',
+        'ris_cookies' => 'getRisCookies',
+        'ris_mobile_device' => 'getRisMobileDevice',
+        'ris_site' => 'getRisSite',
+        'ris_master_card_fraud_score' => 'getRisMasterCardFraudScore',
+        'ris_pierced_ip_address' => 'getRisPiercedIpAddress',
+        'ris_pierced_ip_address_latitude' => 'getRisPiercedIpAddressLatitude',
+        'ris_pierced_ip_address_longitude' => 'getRisPiercedIpAddressLongitude',
+        'ris_pierced_ip_address_country' => 'getRisPiercedIpAddressCountry',
+        'ris_pierced_ip_address_region' => 'getRisPiercedIpAddressRegion',
+        'ris_pierced_ip_address_city' => 'getRisPiercedIpAddressCity',
+        'ris_pierced_ip_address_organization' => 'getRisPiercedIpAddressOrganization',
+        'ris_ip_address' => 'getRisIpAddress',
+        'ris_ip_address_latitude' => 'getRisIpAddressLatitude',
+        'ris_ip_address_longitude' => 'getRisIpAddressLongitude',
+        'ris_ip_address_country' => 'getRisIpAddressCountry',
+        'ris_ip_address_region' => 'getRisIpAddressRegion',
+        'ris_ip_address_city' => 'getRisIpAddressCity',
+        'ris_ip_address_organization' => 'getRisIpAddressOrganization',
+        'ris_date_device_first_seen' => 'getRisDateDeviceFirstSeen',
+        'ris_user_agent_string' => 'getRisUserAgentString',
+        'ris_device_screen_resolution' => 'getRisDeviceScreenResolution',
         'ris_os' => 'getRisOs',
-        'ris_pip_ipad' => 'getRisPipIpad',
-        'ris_pip_lat' => 'getRisPipLat',
-        'ris_pip_lon' => 'getRisPipLon',
-        'ris_pip_country' => 'getRisPipCountry',
-        'ris_pip_region' => 'getRisPipRegion',
-        'ris_pip_city' => 'getRisPipCity',
-        'ris_pip_org' => 'getRisPipOrg',
-        'ris_ip_ipad' => 'getRisIpIpad',
-        'ris_ip_lat' => 'getRisIpLat',
-        'ris_ip_lon' => 'getRisIpLon',
-        'ris_ip_country' => 'getRisIpCountry',
-        'ris_ip_region' => 'getRisIpRegion',
-        'ris_ip_city' => 'getRisIpCity',
-        'ris_ip_org' => 'getRisIpOrg',
-        'ris_warning_count' => 'getRisWarningCount'
+        'ris_browser' => 'getRisBrowser',
+        'ris_to_string' => 'getRisToString',
+        'rules_triggered' => 'getRulesTriggered',
+        'ris_number_rules_triggered' => 'getRisNumberRulesTriggered',
+        'ris_warnings' => 'getRisWarnings',
+        'ris_warning_count' => 'getRisWarningCount',
+        'ris_errors' => 'getRisErrors',
+        'ris_error_count' => 'getRisErrorCount',
+        'has_errors' => 'getHasErrors',
+        'ris_lexis_nexis_cbd_attributes' => 'getRisLexisNexisCbdAttributes',
+        'ris_lexis_nexis_instant_id_attributes' => 'getRisLexisNexisInstantIdAttributes',
+        'ris_counters_triggered' => 'getRisCountersTriggered',
+        'ris_number_counters_triggered' => 'getRisNumberCountersTriggered',
+        'ris_kount_central_customer_id' => 'getRisKountCentralCustomerId',
+        'ris_kount_central_warnings' => 'getRisKountCentralWarnings',
+        'ris_kount_central_warning_count' => 'getRisKountCentralWarningCount',
+        'ris_kount_central_errors' => 'getRisKountCentralErrors',
+        'ris_kount_central_error_count' => 'getRisKountCentralErrorCount',
+        'ris_kount_central_number_thresholds_triggered' => 'getRisKountCentralNumberThresholdsTriggered',
+        'ris_kount_central_decision' => 'getRisKountCentralDecision',
+        'kount_central_threshold_events' => 'getKountCentralThresholdEvents'
     ];
 
     /**
@@ -467,65 +577,87 @@ class ResponseModel implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['ris_response'] = isset($data['ris_response']) ? $data['ris_response'] : null;
-        $this->container['ris_vers'] = isset($data['ris_vers']) ? $data['ris_vers'] : null;
+        $this->container['get_response'] = isset($data['get_response']) ? $data['get_response'] : null;
+        $this->container['ris_error_code'] = isset($data['ris_error_code']) ? $data['ris_error_code'] : null;
+        $this->container['ris_version'] = isset($data['ris_version']) ? $data['ris_version'] : null;
         $this->container['ris_mode'] = isset($data['ris_mode']) ? $data['ris_mode'] : null;
-        $this->container['ris_merc'] = isset($data['ris_merc']) ? $data['ris_merc'] : null;
-        $this->container['ris_sess'] = isset($data['ris_sess']) ? $data['ris_sess'] : null;
-        $this->container['ris_ordr'] = isset($data['ris_ordr']) ? $data['ris_ordr'] : null;
+        $this->container['ris_transaction_id'] = isset($data['ris_transaction_id']) ? $data['ris_transaction_id'] : null;
+        $this->container['ris_merchant_id'] = isset($data['ris_merchant_id']) ? $data['ris_merchant_id'] : null;
+        $this->container['ris_session_id'] = isset($data['ris_session_id']) ? $data['ris_session_id'] : null;
+        $this->container['ris_order_number'] = isset($data['ris_order_number']) ? $data['ris_order_number'] : null;
         $this->container['ris_auto'] = isset($data['ris_auto']) ? $data['ris_auto'] : null;
-        $this->container['ris_scor'] = isset($data['ris_scor']) ? $data['ris_scor'] : null;
+        $this->container['ris_reason'] = isset($data['ris_reason']) ? $data['ris_reason'] : null;
+        $this->container['ris_reason_code'] = isset($data['ris_reason_code']) ? $data['ris_reason_code'] : null;
+        $this->container['ris_score'] = isset($data['ris_score']) ? $data['ris_score'] : null;
+        $this->container['ris_omniscore'] = isset($data['ris_omniscore']) ? $data['ris_omniscore'] : null;
         $this->container['ris_geox'] = isset($data['ris_geox']) ? $data['ris_geox'] : null;
-        $this->container['ris_brnd'] = isset($data['ris_brnd']) ? $data['ris_brnd'] : null;
-        $this->container['ris_regn'] = isset($data['ris_regn']) ? $data['ris_regn'] : null;
-        $this->container['ris_netw'] = isset($data['ris_netw']) ? $data['ris_netw'] : null;
-        $this->container['ris_kapt'] = isset($data['ris_kapt']) ? $data['ris_kapt'] : null;
-        $this->container['ris_cards'] = isset($data['ris_cards']) ? $data['ris_cards'] : null;
-        $this->container['ris_devices'] = isset($data['ris_devices']) ? $data['ris_devices'] : null;
-        $this->container['ris_emails'] = isset($data['ris_emails']) ? $data['ris_emails'] : null;
+        $this->container['ris_brand'] = isset($data['ris_brand']) ? $data['ris_brand'] : null;
         $this->container['ris_velo'] = isset($data['ris_velo']) ? $data['ris_velo'] : null;
         $this->container['ris_vmax'] = isset($data['ris_vmax']) ? $data['ris_vmax'] : null;
-        $this->container['ris_site'] = isset($data['ris_site']) ? $data['ris_site'] : null;
-        $this->container['ris_device_layers'] = isset($data['ris_device_layers']) ? $data['ris_device_layers'] : null;
-        $this->container['ris_fingerprint'] = isset($data['ris_fingerprint']) ? $data['ris_fingerprint'] : null;
-        $this->container['ris_timezone'] = isset($data['ris_timezone']) ? $data['ris_timezone'] : null;
-        $this->container['ris_localtime'] = isset($data['ris_localtime']) ? $data['ris_localtime'] : null;
+        $this->container['ris_network'] = isset($data['ris_network']) ? $data['ris_network'] : null;
+        $this->container['ris_know_your_customer'] = isset($data['ris_know_your_customer']) ? $data['ris_know_your_customer'] : null;
         $this->container['ris_region'] = isset($data['ris_region']) ? $data['ris_region'] : null;
-        $this->container['ris_country'] = isset($data['ris_country']) ? $data['ris_country'] : null;
+        $this->container['ris_kaptcha'] = isset($data['ris_kaptcha']) ? $data['ris_kaptcha'] : null;
         $this->container['ris_proxy'] = isset($data['ris_proxy']) ? $data['ris_proxy'] : null;
-        $this->container['ris_javascript'] = isset($data['ris_javascript']) ? $data['ris_javascript'] : null;
-        $this->container['ris_flash'] = isset($data['ris_flash']) ? $data['ris_flash'] : null;
-        $this->container['ris_cookies'] = isset($data['ris_cookies']) ? $data['ris_cookies'] : null;
+        $this->container['ris_emails'] = isset($data['ris_emails']) ? $data['ris_emails'] : null;
         $this->container['ris_http_country'] = isset($data['ris_http_country']) ? $data['ris_http_country'] : null;
-        $this->container['ris_language'] = isset($data['ris_language']) ? $data['ris_language'] : null;
-        $this->container['ris_mobile_device'] = isset($data['ris_mobile_device']) ? $data['ris_mobile_device'] : null;
-        $this->container['ris_mobile_type'] = isset($data['ris_mobile_type']) ? $data['ris_mobile_type'] : null;
+        $this->container['ris_time_zone'] = isset($data['ris_time_zone']) ? $data['ris_time_zone'] : null;
+        $this->container['ris_cards'] = isset($data['ris_cards']) ? $data['ris_cards'] : null;
+        $this->container['ris_pc_remote'] = isset($data['ris_pc_remote']) ? $data['ris_pc_remote'] : null;
+        $this->container['ris_devices'] = isset($data['ris_devices']) ? $data['ris_devices'] : null;
+        $this->container['ris_device_layers'] = isset($data['ris_device_layers']) ? $data['ris_device_layers'] : null;
         $this->container['ris_mobile_forwarder'] = isset($data['ris_mobile_forwarder']) ? $data['ris_mobile_forwarder'] : null;
         $this->container['ris_voice_device'] = isset($data['ris_voice_device']) ? $data['ris_voice_device'] : null;
-        $this->container['ris_pc_remote'] = isset($data['ris_pc_remote']) ? $data['ris_pc_remote'] : null;
-        $this->container['ris_rules_triggered'] = isset($data['ris_rules_triggered']) ? $data['ris_rules_triggered'] : null;
-        $this->container['ris_counters_triggered'] = isset($data['ris_counters_triggered']) ? $data['ris_counters_triggered'] : null;
-        $this->container['ris_reason_code'] = isset($data['ris_reason_code']) ? $data['ris_reason_code'] : null;
-        $this->container['ris_ddfs'] = isset($data['ris_ddfs']) ? $data['ris_ddfs'] : null;
-        $this->container['ris_dsr'] = isset($data['ris_dsr']) ? $data['ris_dsr'] : null;
-        $this->container['ris_uas'] = isset($data['ris_uas']) ? $data['ris_uas'] : null;
-        $this->container['ris_browser'] = isset($data['ris_browser']) ? $data['ris_browser'] : null;
+        $this->container['ris_local_time'] = isset($data['ris_local_time']) ? $data['ris_local_time'] : null;
+        $this->container['ris_mobile_type'] = isset($data['ris_mobile_type']) ? $data['ris_mobile_type'] : null;
+        $this->container['ris_finger_print'] = isset($data['ris_finger_print']) ? $data['ris_finger_print'] : null;
+        $this->container['ris_flash'] = isset($data['ris_flash']) ? $data['ris_flash'] : null;
+        $this->container['ris_language'] = isset($data['ris_language']) ? $data['ris_language'] : null;
+        $this->container['ris_country'] = isset($data['ris_country']) ? $data['ris_country'] : null;
+        $this->container['ris_java_script'] = isset($data['ris_java_script']) ? $data['ris_java_script'] : null;
+        $this->container['ris_cookies'] = isset($data['ris_cookies']) ? $data['ris_cookies'] : null;
+        $this->container['ris_mobile_device'] = isset($data['ris_mobile_device']) ? $data['ris_mobile_device'] : null;
+        $this->container['ris_site'] = isset($data['ris_site']) ? $data['ris_site'] : null;
+        $this->container['ris_master_card_fraud_score'] = isset($data['ris_master_card_fraud_score']) ? $data['ris_master_card_fraud_score'] : null;
+        $this->container['ris_pierced_ip_address'] = isset($data['ris_pierced_ip_address']) ? $data['ris_pierced_ip_address'] : null;
+        $this->container['ris_pierced_ip_address_latitude'] = isset($data['ris_pierced_ip_address_latitude']) ? $data['ris_pierced_ip_address_latitude'] : null;
+        $this->container['ris_pierced_ip_address_longitude'] = isset($data['ris_pierced_ip_address_longitude']) ? $data['ris_pierced_ip_address_longitude'] : null;
+        $this->container['ris_pierced_ip_address_country'] = isset($data['ris_pierced_ip_address_country']) ? $data['ris_pierced_ip_address_country'] : null;
+        $this->container['ris_pierced_ip_address_region'] = isset($data['ris_pierced_ip_address_region']) ? $data['ris_pierced_ip_address_region'] : null;
+        $this->container['ris_pierced_ip_address_city'] = isset($data['ris_pierced_ip_address_city']) ? $data['ris_pierced_ip_address_city'] : null;
+        $this->container['ris_pierced_ip_address_organization'] = isset($data['ris_pierced_ip_address_organization']) ? $data['ris_pierced_ip_address_organization'] : null;
+        $this->container['ris_ip_address'] = isset($data['ris_ip_address']) ? $data['ris_ip_address'] : null;
+        $this->container['ris_ip_address_latitude'] = isset($data['ris_ip_address_latitude']) ? $data['ris_ip_address_latitude'] : null;
+        $this->container['ris_ip_address_longitude'] = isset($data['ris_ip_address_longitude']) ? $data['ris_ip_address_longitude'] : null;
+        $this->container['ris_ip_address_country'] = isset($data['ris_ip_address_country']) ? $data['ris_ip_address_country'] : null;
+        $this->container['ris_ip_address_region'] = isset($data['ris_ip_address_region']) ? $data['ris_ip_address_region'] : null;
+        $this->container['ris_ip_address_city'] = isset($data['ris_ip_address_city']) ? $data['ris_ip_address_city'] : null;
+        $this->container['ris_ip_address_organization'] = isset($data['ris_ip_address_organization']) ? $data['ris_ip_address_organization'] : null;
+        $this->container['ris_date_device_first_seen'] = isset($data['ris_date_device_first_seen']) ? $data['ris_date_device_first_seen'] : null;
+        $this->container['ris_user_agent_string'] = isset($data['ris_user_agent_string']) ? $data['ris_user_agent_string'] : null;
+        $this->container['ris_device_screen_resolution'] = isset($data['ris_device_screen_resolution']) ? $data['ris_device_screen_resolution'] : null;
         $this->container['ris_os'] = isset($data['ris_os']) ? $data['ris_os'] : null;
-        $this->container['ris_pip_ipad'] = isset($data['ris_pip_ipad']) ? $data['ris_pip_ipad'] : null;
-        $this->container['ris_pip_lat'] = isset($data['ris_pip_lat']) ? $data['ris_pip_lat'] : null;
-        $this->container['ris_pip_lon'] = isset($data['ris_pip_lon']) ? $data['ris_pip_lon'] : null;
-        $this->container['ris_pip_country'] = isset($data['ris_pip_country']) ? $data['ris_pip_country'] : null;
-        $this->container['ris_pip_region'] = isset($data['ris_pip_region']) ? $data['ris_pip_region'] : null;
-        $this->container['ris_pip_city'] = isset($data['ris_pip_city']) ? $data['ris_pip_city'] : null;
-        $this->container['ris_pip_org'] = isset($data['ris_pip_org']) ? $data['ris_pip_org'] : null;
-        $this->container['ris_ip_ipad'] = isset($data['ris_ip_ipad']) ? $data['ris_ip_ipad'] : null;
-        $this->container['ris_ip_lat'] = isset($data['ris_ip_lat']) ? $data['ris_ip_lat'] : null;
-        $this->container['ris_ip_lon'] = isset($data['ris_ip_lon']) ? $data['ris_ip_lon'] : null;
-        $this->container['ris_ip_country'] = isset($data['ris_ip_country']) ? $data['ris_ip_country'] : null;
-        $this->container['ris_ip_region'] = isset($data['ris_ip_region']) ? $data['ris_ip_region'] : null;
-        $this->container['ris_ip_city'] = isset($data['ris_ip_city']) ? $data['ris_ip_city'] : null;
-        $this->container['ris_ip_org'] = isset($data['ris_ip_org']) ? $data['ris_ip_org'] : null;
+        $this->container['ris_browser'] = isset($data['ris_browser']) ? $data['ris_browser'] : null;
+        $this->container['ris_to_string'] = isset($data['ris_to_string']) ? $data['ris_to_string'] : null;
+        $this->container['rules_triggered'] = isset($data['rules_triggered']) ? $data['rules_triggered'] : null;
+        $this->container['ris_number_rules_triggered'] = isset($data['ris_number_rules_triggered']) ? $data['ris_number_rules_triggered'] : null;
+        $this->container['ris_warnings'] = isset($data['ris_warnings']) ? $data['ris_warnings'] : null;
         $this->container['ris_warning_count'] = isset($data['ris_warning_count']) ? $data['ris_warning_count'] : null;
+        $this->container['ris_errors'] = isset($data['ris_errors']) ? $data['ris_errors'] : null;
+        $this->container['ris_error_count'] = isset($data['ris_error_count']) ? $data['ris_error_count'] : null;
+        $this->container['has_errors'] = isset($data['has_errors']) ? $data['has_errors'] : null;
+        $this->container['ris_lexis_nexis_cbd_attributes'] = isset($data['ris_lexis_nexis_cbd_attributes']) ? $data['ris_lexis_nexis_cbd_attributes'] : null;
+        $this->container['ris_lexis_nexis_instant_id_attributes'] = isset($data['ris_lexis_nexis_instant_id_attributes']) ? $data['ris_lexis_nexis_instant_id_attributes'] : null;
+        $this->container['ris_counters_triggered'] = isset($data['ris_counters_triggered']) ? $data['ris_counters_triggered'] : null;
+        $this->container['ris_number_counters_triggered'] = isset($data['ris_number_counters_triggered']) ? $data['ris_number_counters_triggered'] : null;
+        $this->container['ris_kount_central_customer_id'] = isset($data['ris_kount_central_customer_id']) ? $data['ris_kount_central_customer_id'] : null;
+        $this->container['ris_kount_central_warnings'] = isset($data['ris_kount_central_warnings']) ? $data['ris_kount_central_warnings'] : null;
+        $this->container['ris_kount_central_warning_count'] = isset($data['ris_kount_central_warning_count']) ? $data['ris_kount_central_warning_count'] : null;
+        $this->container['ris_kount_central_errors'] = isset($data['ris_kount_central_errors']) ? $data['ris_kount_central_errors'] : null;
+        $this->container['ris_kount_central_error_count'] = isset($data['ris_kount_central_error_count']) ? $data['ris_kount_central_error_count'] : null;
+        $this->container['ris_kount_central_number_thresholds_triggered'] = isset($data['ris_kount_central_number_thresholds_triggered']) ? $data['ris_kount_central_number_thresholds_triggered'] : null;
+        $this->container['ris_kount_central_decision'] = isset($data['ris_kount_central_decision']) ? $data['ris_kount_central_decision'] : null;
+        $this->container['kount_central_threshold_events'] = isset($data['kount_central_threshold_events']) ? $data['kount_central_threshold_events'] : null;
     }
 
     /**
@@ -553,49 +685,73 @@ class ResponseModel implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets ris_response
+     * Gets get_response
      *
      * @return string
      */
-    public function getRisResponse()
+    public function getGetResponse()
     {
-        return $this->container['ris_response'];
+        return $this->container['get_response'];
     }
 
     /**
-     * Sets ris_response
+     * Sets get_response
      *
-     * @param string $ris_response ris_response
+     * @param string $get_response get_response
      *
      * @return $this
      */
-    public function setRisResponse($ris_response)
+    public function setGetResponse($get_response)
     {
-        $this->container['ris_response'] = $ris_response;
+        $this->container['get_response'] = $get_response;
 
         return $this;
     }
 
     /**
-     * Gets ris_vers
+     * Gets ris_error_code
      *
      * @return string
      */
-    public function getRisVers()
+    public function getRisErrorCode()
     {
-        return $this->container['ris_vers'];
+        return $this->container['ris_error_code'];
     }
 
     /**
-     * Sets ris_vers
+     * Sets ris_error_code
      *
-     * @param string $ris_vers ris_vers
+     * @param string $ris_error_code ris_error_code
      *
      * @return $this
      */
-    public function setRisVers($ris_vers)
+    public function setRisErrorCode($ris_error_code)
     {
-        $this->container['ris_vers'] = $ris_vers;
+        $this->container['ris_error_code'] = $ris_error_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_version
+     *
+     * @return string
+     */
+    public function getRisVersion()
+    {
+        return $this->container['ris_version'];
+    }
+
+    /**
+     * Sets ris_version
+     *
+     * @param string $ris_version ris_version
+     *
+     * @return $this
+     */
+    public function setRisVersion($ris_version)
+    {
+        $this->container['ris_version'] = $ris_version;
 
         return $this;
     }
@@ -625,73 +781,97 @@ class ResponseModel implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets ris_merc
+     * Gets ris_transaction_id
      *
      * @return string
      */
-    public function getRisMerc()
+    public function getRisTransactionId()
     {
-        return $this->container['ris_merc'];
+        return $this->container['ris_transaction_id'];
     }
 
     /**
-     * Sets ris_merc
+     * Sets ris_transaction_id
      *
-     * @param string $ris_merc ris_merc
+     * @param string $ris_transaction_id ris_transaction_id
      *
      * @return $this
      */
-    public function setRisMerc($ris_merc)
+    public function setRisTransactionId($ris_transaction_id)
     {
-        $this->container['ris_merc'] = $ris_merc;
+        $this->container['ris_transaction_id'] = $ris_transaction_id;
 
         return $this;
     }
 
     /**
-     * Gets ris_sess
+     * Gets ris_merchant_id
      *
      * @return string
      */
-    public function getRisSess()
+    public function getRisMerchantId()
     {
-        return $this->container['ris_sess'];
+        return $this->container['ris_merchant_id'];
     }
 
     /**
-     * Sets ris_sess
+     * Sets ris_merchant_id
      *
-     * @param string $ris_sess ris_sess
+     * @param string $ris_merchant_id ris_merchant_id
      *
      * @return $this
      */
-    public function setRisSess($ris_sess)
+    public function setRisMerchantId($ris_merchant_id)
     {
-        $this->container['ris_sess'] = $ris_sess;
+        $this->container['ris_merchant_id'] = $ris_merchant_id;
 
         return $this;
     }
 
     /**
-     * Gets ris_ordr
+     * Gets ris_session_id
      *
      * @return string
      */
-    public function getRisOrdr()
+    public function getRisSessionId()
     {
-        return $this->container['ris_ordr'];
+        return $this->container['ris_session_id'];
     }
 
     /**
-     * Sets ris_ordr
+     * Sets ris_session_id
      *
-     * @param string $ris_ordr ris_ordr
+     * @param string $ris_session_id ris_session_id
      *
      * @return $this
      */
-    public function setRisOrdr($ris_ordr)
+    public function setRisSessionId($ris_session_id)
     {
-        $this->container['ris_ordr'] = $ris_ordr;
+        $this->container['ris_session_id'] = $ris_session_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_order_number
+     *
+     * @return string
+     */
+    public function getRisOrderNumber()
+    {
+        return $this->container['ris_order_number'];
+    }
+
+    /**
+     * Sets ris_order_number
+     *
+     * @param string $ris_order_number ris_order_number
+     *
+     * @return $this
+     */
+    public function setRisOrderNumber($ris_order_number)
+    {
+        $this->container['ris_order_number'] = $ris_order_number;
 
         return $this;
     }
@@ -721,25 +901,97 @@ class ResponseModel implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets ris_scor
+     * Gets ris_reason
      *
      * @return string
      */
-    public function getRisScor()
+    public function getRisReason()
     {
-        return $this->container['ris_scor'];
+        return $this->container['ris_reason'];
     }
 
     /**
-     * Sets ris_scor
+     * Sets ris_reason
      *
-     * @param string $ris_scor ris_scor
+     * @param string $ris_reason ris_reason
      *
      * @return $this
      */
-    public function setRisScor($ris_scor)
+    public function setRisReason($ris_reason)
     {
-        $this->container['ris_scor'] = $ris_scor;
+        $this->container['ris_reason'] = $ris_reason;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_reason_code
+     *
+     * @return string
+     */
+    public function getRisReasonCode()
+    {
+        return $this->container['ris_reason_code'];
+    }
+
+    /**
+     * Sets ris_reason_code
+     *
+     * @param string $ris_reason_code ris_reason_code
+     *
+     * @return $this
+     */
+    public function setRisReasonCode($ris_reason_code)
+    {
+        $this->container['ris_reason_code'] = $ris_reason_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_score
+     *
+     * @return string
+     */
+    public function getRisScore()
+    {
+        return $this->container['ris_score'];
+    }
+
+    /**
+     * Sets ris_score
+     *
+     * @param string $ris_score ris_score
+     *
+     * @return $this
+     */
+    public function setRisScore($ris_score)
+    {
+        $this->container['ris_score'] = $ris_score;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_omniscore
+     *
+     * @return string
+     */
+    public function getRisOmniscore()
+    {
+        return $this->container['ris_omniscore'];
+    }
+
+    /**
+     * Sets ris_omniscore
+     *
+     * @param string $ris_omniscore ris_omniscore
+     *
+     * @return $this
+     */
+    public function setRisOmniscore($ris_omniscore)
+    {
+        $this->container['ris_omniscore'] = $ris_omniscore;
 
         return $this;
     }
@@ -769,169 +1021,25 @@ class ResponseModel implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets ris_brnd
+     * Gets ris_brand
      *
      * @return string
      */
-    public function getRisBrnd()
+    public function getRisBrand()
     {
-        return $this->container['ris_brnd'];
+        return $this->container['ris_brand'];
     }
 
     /**
-     * Sets ris_brnd
+     * Sets ris_brand
      *
-     * @param string $ris_brnd ris_brnd
+     * @param string $ris_brand ris_brand
      *
      * @return $this
      */
-    public function setRisBrnd($ris_brnd)
+    public function setRisBrand($ris_brand)
     {
-        $this->container['ris_brnd'] = $ris_brnd;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_regn
-     *
-     * @return string
-     */
-    public function getRisRegn()
-    {
-        return $this->container['ris_regn'];
-    }
-
-    /**
-     * Sets ris_regn
-     *
-     * @param string $ris_regn ris_regn
-     *
-     * @return $this
-     */
-    public function setRisRegn($ris_regn)
-    {
-        $this->container['ris_regn'] = $ris_regn;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_netw
-     *
-     * @return string
-     */
-    public function getRisNetw()
-    {
-        return $this->container['ris_netw'];
-    }
-
-    /**
-     * Sets ris_netw
-     *
-     * @param string $ris_netw ris_netw
-     *
-     * @return $this
-     */
-    public function setRisNetw($ris_netw)
-    {
-        $this->container['ris_netw'] = $ris_netw;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_kapt
-     *
-     * @return string
-     */
-    public function getRisKapt()
-    {
-        return $this->container['ris_kapt'];
-    }
-
-    /**
-     * Sets ris_kapt
-     *
-     * @param string $ris_kapt ris_kapt
-     *
-     * @return $this
-     */
-    public function setRisKapt($ris_kapt)
-    {
-        $this->container['ris_kapt'] = $ris_kapt;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_cards
-     *
-     * @return string
-     */
-    public function getRisCards()
-    {
-        return $this->container['ris_cards'];
-    }
-
-    /**
-     * Sets ris_cards
-     *
-     * @param string $ris_cards ris_cards
-     *
-     * @return $this
-     */
-    public function setRisCards($ris_cards)
-    {
-        $this->container['ris_cards'] = $ris_cards;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_devices
-     *
-     * @return string
-     */
-    public function getRisDevices()
-    {
-        return $this->container['ris_devices'];
-    }
-
-    /**
-     * Sets ris_devices
-     *
-     * @param string $ris_devices ris_devices
-     *
-     * @return $this
-     */
-    public function setRisDevices($ris_devices)
-    {
-        $this->container['ris_devices'] = $ris_devices;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_emails
-     *
-     * @return string
-     */
-    public function getRisEmails()
-    {
-        return $this->container['ris_emails'];
-    }
-
-    /**
-     * Sets ris_emails
-     *
-     * @param string $ris_emails ris_emails
-     *
-     * @return $this
-     */
-    public function setRisEmails($ris_emails)
-    {
-        $this->container['ris_emails'] = $ris_emails;
+        $this->container['ris_brand'] = $ris_brand;
 
         return $this;
     }
@@ -985,121 +1093,49 @@ class ResponseModel implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets ris_site
+     * Gets ris_network
      *
      * @return string
      */
-    public function getRisSite()
+    public function getRisNetwork()
     {
-        return $this->container['ris_site'];
+        return $this->container['ris_network'];
     }
 
     /**
-     * Sets ris_site
+     * Sets ris_network
      *
-     * @param string $ris_site ris_site
+     * @param string $ris_network ris_network
      *
      * @return $this
      */
-    public function setRisSite($ris_site)
+    public function setRisNetwork($ris_network)
     {
-        $this->container['ris_site'] = $ris_site;
+        $this->container['ris_network'] = $ris_network;
 
         return $this;
     }
 
     /**
-     * Gets ris_device_layers
+     * Gets ris_know_your_customer
      *
      * @return string
      */
-    public function getRisDeviceLayers()
+    public function getRisKnowYourCustomer()
     {
-        return $this->container['ris_device_layers'];
+        return $this->container['ris_know_your_customer'];
     }
 
     /**
-     * Sets ris_device_layers
+     * Sets ris_know_your_customer
      *
-     * @param string $ris_device_layers ris_device_layers
+     * @param string $ris_know_your_customer ris_know_your_customer
      *
      * @return $this
      */
-    public function setRisDeviceLayers($ris_device_layers)
+    public function setRisKnowYourCustomer($ris_know_your_customer)
     {
-        $this->container['ris_device_layers'] = $ris_device_layers;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_fingerprint
-     *
-     * @return string
-     */
-    public function getRisFingerprint()
-    {
-        return $this->container['ris_fingerprint'];
-    }
-
-    /**
-     * Sets ris_fingerprint
-     *
-     * @param string $ris_fingerprint ris_fingerprint
-     *
-     * @return $this
-     */
-    public function setRisFingerprint($ris_fingerprint)
-    {
-        $this->container['ris_fingerprint'] = $ris_fingerprint;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_timezone
-     *
-     * @return string
-     */
-    public function getRisTimezone()
-    {
-        return $this->container['ris_timezone'];
-    }
-
-    /**
-     * Sets ris_timezone
-     *
-     * @param string $ris_timezone ris_timezone
-     *
-     * @return $this
-     */
-    public function setRisTimezone($ris_timezone)
-    {
-        $this->container['ris_timezone'] = $ris_timezone;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_localtime
-     *
-     * @return string
-     */
-    public function getRisLocaltime()
-    {
-        return $this->container['ris_localtime'];
-    }
-
-    /**
-     * Sets ris_localtime
-     *
-     * @param string $ris_localtime ris_localtime
-     *
-     * @return $this
-     */
-    public function setRisLocaltime($ris_localtime)
-    {
-        $this->container['ris_localtime'] = $ris_localtime;
+        $this->container['ris_know_your_customer'] = $ris_know_your_customer;
 
         return $this;
     }
@@ -1129,25 +1165,25 @@ class ResponseModel implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets ris_country
+     * Gets ris_kaptcha
      *
      * @return string
      */
-    public function getRisCountry()
+    public function getRisKaptcha()
     {
-        return $this->container['ris_country'];
+        return $this->container['ris_kaptcha'];
     }
 
     /**
-     * Sets ris_country
+     * Sets ris_kaptcha
      *
-     * @param string $ris_country ris_country
+     * @param string $ris_kaptcha ris_kaptcha
      *
      * @return $this
      */
-    public function setRisCountry($ris_country)
+    public function setRisKaptcha($ris_kaptcha)
     {
-        $this->container['ris_country'] = $ris_country;
+        $this->container['ris_kaptcha'] = $ris_kaptcha;
 
         return $this;
     }
@@ -1177,73 +1213,25 @@ class ResponseModel implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets ris_javascript
+     * Gets ris_emails
      *
      * @return string
      */
-    public function getRisJavascript()
+    public function getRisEmails()
     {
-        return $this->container['ris_javascript'];
+        return $this->container['ris_emails'];
     }
 
     /**
-     * Sets ris_javascript
+     * Sets ris_emails
      *
-     * @param string $ris_javascript ris_javascript
+     * @param string $ris_emails ris_emails
      *
      * @return $this
      */
-    public function setRisJavascript($ris_javascript)
+    public function setRisEmails($ris_emails)
     {
-        $this->container['ris_javascript'] = $ris_javascript;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_flash
-     *
-     * @return string
-     */
-    public function getRisFlash()
-    {
-        return $this->container['ris_flash'];
-    }
-
-    /**
-     * Sets ris_flash
-     *
-     * @param string $ris_flash ris_flash
-     *
-     * @return $this
-     */
-    public function setRisFlash($ris_flash)
-    {
-        $this->container['ris_flash'] = $ris_flash;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_cookies
-     *
-     * @return string
-     */
-    public function getRisCookies()
-    {
-        return $this->container['ris_cookies'];
-    }
-
-    /**
-     * Sets ris_cookies
-     *
-     * @param string $ris_cookies ris_cookies
-     *
-     * @return $this
-     */
-    public function setRisCookies($ris_cookies)
-    {
-        $this->container['ris_cookies'] = $ris_cookies;
+        $this->container['ris_emails'] = $ris_emails;
 
         return $this;
     }
@@ -1273,73 +1261,121 @@ class ResponseModel implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets ris_language
+     * Gets ris_time_zone
      *
      * @return string
      */
-    public function getRisLanguage()
+    public function getRisTimeZone()
     {
-        return $this->container['ris_language'];
+        return $this->container['ris_time_zone'];
     }
 
     /**
-     * Sets ris_language
+     * Sets ris_time_zone
      *
-     * @param string $ris_language ris_language
+     * @param string $ris_time_zone ris_time_zone
      *
      * @return $this
      */
-    public function setRisLanguage($ris_language)
+    public function setRisTimeZone($ris_time_zone)
     {
-        $this->container['ris_language'] = $ris_language;
+        $this->container['ris_time_zone'] = $ris_time_zone;
 
         return $this;
     }
 
     /**
-     * Gets ris_mobile_device
+     * Gets ris_cards
      *
      * @return string
      */
-    public function getRisMobileDevice()
+    public function getRisCards()
     {
-        return $this->container['ris_mobile_device'];
+        return $this->container['ris_cards'];
     }
 
     /**
-     * Sets ris_mobile_device
+     * Sets ris_cards
      *
-     * @param string $ris_mobile_device ris_mobile_device
+     * @param string $ris_cards ris_cards
      *
      * @return $this
      */
-    public function setRisMobileDevice($ris_mobile_device)
+    public function setRisCards($ris_cards)
     {
-        $this->container['ris_mobile_device'] = $ris_mobile_device;
+        $this->container['ris_cards'] = $ris_cards;
 
         return $this;
     }
 
     /**
-     * Gets ris_mobile_type
+     * Gets ris_pc_remote
      *
      * @return string
      */
-    public function getRisMobileType()
+    public function getRisPcRemote()
     {
-        return $this->container['ris_mobile_type'];
+        return $this->container['ris_pc_remote'];
     }
 
     /**
-     * Sets ris_mobile_type
+     * Sets ris_pc_remote
      *
-     * @param string $ris_mobile_type ris_mobile_type
+     * @param string $ris_pc_remote ris_pc_remote
      *
      * @return $this
      */
-    public function setRisMobileType($ris_mobile_type)
+    public function setRisPcRemote($ris_pc_remote)
     {
-        $this->container['ris_mobile_type'] = $ris_mobile_type;
+        $this->container['ris_pc_remote'] = $ris_pc_remote;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_devices
+     *
+     * @return string
+     */
+    public function getRisDevices()
+    {
+        return $this->container['ris_devices'];
+    }
+
+    /**
+     * Sets ris_devices
+     *
+     * @param string $ris_devices ris_devices
+     *
+     * @return $this
+     */
+    public function setRisDevices($ris_devices)
+    {
+        $this->container['ris_devices'] = $ris_devices;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_device_layers
+     *
+     * @return string
+     */
+    public function getRisDeviceLayers()
+    {
+        return $this->container['ris_device_layers'];
+    }
+
+    /**
+     * Sets ris_device_layers
+     *
+     * @param string $ris_device_layers ris_device_layers
+     *
+     * @return $this
+     */
+    public function setRisDeviceLayers($ris_device_layers)
+    {
+        $this->container['ris_device_layers'] = $ris_device_layers;
 
         return $this;
     }
@@ -1393,193 +1429,673 @@ class ResponseModel implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets ris_pc_remote
+     * Gets ris_local_time
      *
      * @return string
      */
-    public function getRisPcRemote()
+    public function getRisLocalTime()
     {
-        return $this->container['ris_pc_remote'];
+        return $this->container['ris_local_time'];
     }
 
     /**
-     * Sets ris_pc_remote
+     * Sets ris_local_time
      *
-     * @param string $ris_pc_remote ris_pc_remote
+     * @param string $ris_local_time ris_local_time
      *
      * @return $this
      */
-    public function setRisPcRemote($ris_pc_remote)
+    public function setRisLocalTime($ris_local_time)
     {
-        $this->container['ris_pc_remote'] = $ris_pc_remote;
+        $this->container['ris_local_time'] = $ris_local_time;
 
         return $this;
     }
 
     /**
-     * Gets ris_rules_triggered
+     * Gets ris_mobile_type
      *
      * @return string
      */
-    public function getRisRulesTriggered()
+    public function getRisMobileType()
     {
-        return $this->container['ris_rules_triggered'];
+        return $this->container['ris_mobile_type'];
     }
 
     /**
-     * Sets ris_rules_triggered
+     * Sets ris_mobile_type
      *
-     * @param string $ris_rules_triggered ris_rules_triggered
+     * @param string $ris_mobile_type ris_mobile_type
      *
      * @return $this
      */
-    public function setRisRulesTriggered($ris_rules_triggered)
+    public function setRisMobileType($ris_mobile_type)
     {
-        $this->container['ris_rules_triggered'] = $ris_rules_triggered;
+        $this->container['ris_mobile_type'] = $ris_mobile_type;
 
         return $this;
     }
 
     /**
-     * Gets ris_counters_triggered
+     * Gets ris_finger_print
      *
      * @return string
      */
-    public function getRisCountersTriggered()
+    public function getRisFingerPrint()
     {
-        return $this->container['ris_counters_triggered'];
+        return $this->container['ris_finger_print'];
     }
 
     /**
-     * Sets ris_counters_triggered
+     * Sets ris_finger_print
      *
-     * @param string $ris_counters_triggered ris_counters_triggered
+     * @param string $ris_finger_print ris_finger_print
      *
      * @return $this
      */
-    public function setRisCountersTriggered($ris_counters_triggered)
+    public function setRisFingerPrint($ris_finger_print)
     {
-        $this->container['ris_counters_triggered'] = $ris_counters_triggered;
+        $this->container['ris_finger_print'] = $ris_finger_print;
 
         return $this;
     }
 
     /**
-     * Gets ris_reason_code
+     * Gets ris_flash
      *
      * @return string
      */
-    public function getRisReasonCode()
+    public function getRisFlash()
     {
-        return $this->container['ris_reason_code'];
+        return $this->container['ris_flash'];
     }
 
     /**
-     * Sets ris_reason_code
+     * Sets ris_flash
      *
-     * @param string $ris_reason_code ris_reason_code
+     * @param string $ris_flash ris_flash
      *
      * @return $this
      */
-    public function setRisReasonCode($ris_reason_code)
+    public function setRisFlash($ris_flash)
     {
-        $this->container['ris_reason_code'] = $ris_reason_code;
+        $this->container['ris_flash'] = $ris_flash;
 
         return $this;
     }
 
     /**
-     * Gets ris_ddfs
+     * Gets ris_language
      *
      * @return string
      */
-    public function getRisDdfs()
+    public function getRisLanguage()
     {
-        return $this->container['ris_ddfs'];
+        return $this->container['ris_language'];
     }
 
     /**
-     * Sets ris_ddfs
+     * Sets ris_language
      *
-     * @param string $ris_ddfs ris_ddfs
+     * @param string $ris_language ris_language
      *
      * @return $this
      */
-    public function setRisDdfs($ris_ddfs)
+    public function setRisLanguage($ris_language)
     {
-        $this->container['ris_ddfs'] = $ris_ddfs;
+        $this->container['ris_language'] = $ris_language;
 
         return $this;
     }
 
     /**
-     * Gets ris_dsr
+     * Gets ris_country
      *
      * @return string
      */
-    public function getRisDsr()
+    public function getRisCountry()
     {
-        return $this->container['ris_dsr'];
+        return $this->container['ris_country'];
     }
 
     /**
-     * Sets ris_dsr
+     * Sets ris_country
      *
-     * @param string $ris_dsr ris_dsr
+     * @param string $ris_country ris_country
      *
      * @return $this
      */
-    public function setRisDsr($ris_dsr)
+    public function setRisCountry($ris_country)
     {
-        $this->container['ris_dsr'] = $ris_dsr;
+        $this->container['ris_country'] = $ris_country;
 
         return $this;
     }
 
     /**
-     * Gets ris_uas
+     * Gets ris_java_script
      *
      * @return string
      */
-    public function getRisUas()
+    public function getRisJavaScript()
     {
-        return $this->container['ris_uas'];
+        return $this->container['ris_java_script'];
     }
 
     /**
-     * Sets ris_uas
+     * Sets ris_java_script
      *
-     * @param string $ris_uas ris_uas
+     * @param string $ris_java_script ris_java_script
      *
      * @return $this
      */
-    public function setRisUas($ris_uas)
+    public function setRisJavaScript($ris_java_script)
     {
-        $this->container['ris_uas'] = $ris_uas;
+        $this->container['ris_java_script'] = $ris_java_script;
 
         return $this;
     }
 
     /**
-     * Gets ris_browser
+     * Gets ris_cookies
      *
      * @return string
      */
-    public function getRisBrowser()
+    public function getRisCookies()
     {
-        return $this->container['ris_browser'];
+        return $this->container['ris_cookies'];
     }
 
     /**
-     * Sets ris_browser
+     * Sets ris_cookies
      *
-     * @param string $ris_browser ris_browser
+     * @param string $ris_cookies ris_cookies
      *
      * @return $this
      */
-    public function setRisBrowser($ris_browser)
+    public function setRisCookies($ris_cookies)
     {
-        $this->container['ris_browser'] = $ris_browser;
+        $this->container['ris_cookies'] = $ris_cookies;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_mobile_device
+     *
+     * @return string
+     */
+    public function getRisMobileDevice()
+    {
+        return $this->container['ris_mobile_device'];
+    }
+
+    /**
+     * Sets ris_mobile_device
+     *
+     * @param string $ris_mobile_device ris_mobile_device
+     *
+     * @return $this
+     */
+    public function setRisMobileDevice($ris_mobile_device)
+    {
+        $this->container['ris_mobile_device'] = $ris_mobile_device;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_site
+     *
+     * @return string
+     */
+    public function getRisSite()
+    {
+        return $this->container['ris_site'];
+    }
+
+    /**
+     * Sets ris_site
+     *
+     * @param string $ris_site ris_site
+     *
+     * @return $this
+     */
+    public function setRisSite($ris_site)
+    {
+        $this->container['ris_site'] = $ris_site;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_master_card_fraud_score
+     *
+     * @return string
+     */
+    public function getRisMasterCardFraudScore()
+    {
+        return $this->container['ris_master_card_fraud_score'];
+    }
+
+    /**
+     * Sets ris_master_card_fraud_score
+     *
+     * @param string $ris_master_card_fraud_score ris_master_card_fraud_score
+     *
+     * @return $this
+     */
+    public function setRisMasterCardFraudScore($ris_master_card_fraud_score)
+    {
+        $this->container['ris_master_card_fraud_score'] = $ris_master_card_fraud_score;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_pierced_ip_address
+     *
+     * @return string
+     */
+    public function getRisPiercedIpAddress()
+    {
+        return $this->container['ris_pierced_ip_address'];
+    }
+
+    /**
+     * Sets ris_pierced_ip_address
+     *
+     * @param string $ris_pierced_ip_address ris_pierced_ip_address
+     *
+     * @return $this
+     */
+    public function setRisPiercedIpAddress($ris_pierced_ip_address)
+    {
+        $this->container['ris_pierced_ip_address'] = $ris_pierced_ip_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_pierced_ip_address_latitude
+     *
+     * @return string
+     */
+    public function getRisPiercedIpAddressLatitude()
+    {
+        return $this->container['ris_pierced_ip_address_latitude'];
+    }
+
+    /**
+     * Sets ris_pierced_ip_address_latitude
+     *
+     * @param string $ris_pierced_ip_address_latitude ris_pierced_ip_address_latitude
+     *
+     * @return $this
+     */
+    public function setRisPiercedIpAddressLatitude($ris_pierced_ip_address_latitude)
+    {
+        $this->container['ris_pierced_ip_address_latitude'] = $ris_pierced_ip_address_latitude;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_pierced_ip_address_longitude
+     *
+     * @return string
+     */
+    public function getRisPiercedIpAddressLongitude()
+    {
+        return $this->container['ris_pierced_ip_address_longitude'];
+    }
+
+    /**
+     * Sets ris_pierced_ip_address_longitude
+     *
+     * @param string $ris_pierced_ip_address_longitude ris_pierced_ip_address_longitude
+     *
+     * @return $this
+     */
+    public function setRisPiercedIpAddressLongitude($ris_pierced_ip_address_longitude)
+    {
+        $this->container['ris_pierced_ip_address_longitude'] = $ris_pierced_ip_address_longitude;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_pierced_ip_address_country
+     *
+     * @return string
+     */
+    public function getRisPiercedIpAddressCountry()
+    {
+        return $this->container['ris_pierced_ip_address_country'];
+    }
+
+    /**
+     * Sets ris_pierced_ip_address_country
+     *
+     * @param string $ris_pierced_ip_address_country ris_pierced_ip_address_country
+     *
+     * @return $this
+     */
+    public function setRisPiercedIpAddressCountry($ris_pierced_ip_address_country)
+    {
+        $this->container['ris_pierced_ip_address_country'] = $ris_pierced_ip_address_country;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_pierced_ip_address_region
+     *
+     * @return string
+     */
+    public function getRisPiercedIpAddressRegion()
+    {
+        return $this->container['ris_pierced_ip_address_region'];
+    }
+
+    /**
+     * Sets ris_pierced_ip_address_region
+     *
+     * @param string $ris_pierced_ip_address_region ris_pierced_ip_address_region
+     *
+     * @return $this
+     */
+    public function setRisPiercedIpAddressRegion($ris_pierced_ip_address_region)
+    {
+        $this->container['ris_pierced_ip_address_region'] = $ris_pierced_ip_address_region;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_pierced_ip_address_city
+     *
+     * @return string
+     */
+    public function getRisPiercedIpAddressCity()
+    {
+        return $this->container['ris_pierced_ip_address_city'];
+    }
+
+    /**
+     * Sets ris_pierced_ip_address_city
+     *
+     * @param string $ris_pierced_ip_address_city ris_pierced_ip_address_city
+     *
+     * @return $this
+     */
+    public function setRisPiercedIpAddressCity($ris_pierced_ip_address_city)
+    {
+        $this->container['ris_pierced_ip_address_city'] = $ris_pierced_ip_address_city;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_pierced_ip_address_organization
+     *
+     * @return string
+     */
+    public function getRisPiercedIpAddressOrganization()
+    {
+        return $this->container['ris_pierced_ip_address_organization'];
+    }
+
+    /**
+     * Sets ris_pierced_ip_address_organization
+     *
+     * @param string $ris_pierced_ip_address_organization ris_pierced_ip_address_organization
+     *
+     * @return $this
+     */
+    public function setRisPiercedIpAddressOrganization($ris_pierced_ip_address_organization)
+    {
+        $this->container['ris_pierced_ip_address_organization'] = $ris_pierced_ip_address_organization;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_ip_address
+     *
+     * @return string
+     */
+    public function getRisIpAddress()
+    {
+        return $this->container['ris_ip_address'];
+    }
+
+    /**
+     * Sets ris_ip_address
+     *
+     * @param string $ris_ip_address ris_ip_address
+     *
+     * @return $this
+     */
+    public function setRisIpAddress($ris_ip_address)
+    {
+        $this->container['ris_ip_address'] = $ris_ip_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_ip_address_latitude
+     *
+     * @return string
+     */
+    public function getRisIpAddressLatitude()
+    {
+        return $this->container['ris_ip_address_latitude'];
+    }
+
+    /**
+     * Sets ris_ip_address_latitude
+     *
+     * @param string $ris_ip_address_latitude ris_ip_address_latitude
+     *
+     * @return $this
+     */
+    public function setRisIpAddressLatitude($ris_ip_address_latitude)
+    {
+        $this->container['ris_ip_address_latitude'] = $ris_ip_address_latitude;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_ip_address_longitude
+     *
+     * @return string
+     */
+    public function getRisIpAddressLongitude()
+    {
+        return $this->container['ris_ip_address_longitude'];
+    }
+
+    /**
+     * Sets ris_ip_address_longitude
+     *
+     * @param string $ris_ip_address_longitude ris_ip_address_longitude
+     *
+     * @return $this
+     */
+    public function setRisIpAddressLongitude($ris_ip_address_longitude)
+    {
+        $this->container['ris_ip_address_longitude'] = $ris_ip_address_longitude;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_ip_address_country
+     *
+     * @return string
+     */
+    public function getRisIpAddressCountry()
+    {
+        return $this->container['ris_ip_address_country'];
+    }
+
+    /**
+     * Sets ris_ip_address_country
+     *
+     * @param string $ris_ip_address_country ris_ip_address_country
+     *
+     * @return $this
+     */
+    public function setRisIpAddressCountry($ris_ip_address_country)
+    {
+        $this->container['ris_ip_address_country'] = $ris_ip_address_country;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_ip_address_region
+     *
+     * @return string
+     */
+    public function getRisIpAddressRegion()
+    {
+        return $this->container['ris_ip_address_region'];
+    }
+
+    /**
+     * Sets ris_ip_address_region
+     *
+     * @param string $ris_ip_address_region ris_ip_address_region
+     *
+     * @return $this
+     */
+    public function setRisIpAddressRegion($ris_ip_address_region)
+    {
+        $this->container['ris_ip_address_region'] = $ris_ip_address_region;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_ip_address_city
+     *
+     * @return string
+     */
+    public function getRisIpAddressCity()
+    {
+        return $this->container['ris_ip_address_city'];
+    }
+
+    /**
+     * Sets ris_ip_address_city
+     *
+     * @param string $ris_ip_address_city ris_ip_address_city
+     *
+     * @return $this
+     */
+    public function setRisIpAddressCity($ris_ip_address_city)
+    {
+        $this->container['ris_ip_address_city'] = $ris_ip_address_city;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_ip_address_organization
+     *
+     * @return string
+     */
+    public function getRisIpAddressOrganization()
+    {
+        return $this->container['ris_ip_address_organization'];
+    }
+
+    /**
+     * Sets ris_ip_address_organization
+     *
+     * @param string $ris_ip_address_organization ris_ip_address_organization
+     *
+     * @return $this
+     */
+    public function setRisIpAddressOrganization($ris_ip_address_organization)
+    {
+        $this->container['ris_ip_address_organization'] = $ris_ip_address_organization;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_date_device_first_seen
+     *
+     * @return string
+     */
+    public function getRisDateDeviceFirstSeen()
+    {
+        return $this->container['ris_date_device_first_seen'];
+    }
+
+    /**
+     * Sets ris_date_device_first_seen
+     *
+     * @param string $ris_date_device_first_seen ris_date_device_first_seen
+     *
+     * @return $this
+     */
+    public function setRisDateDeviceFirstSeen($ris_date_device_first_seen)
+    {
+        $this->container['ris_date_device_first_seen'] = $ris_date_device_first_seen;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_user_agent_string
+     *
+     * @return string
+     */
+    public function getRisUserAgentString()
+    {
+        return $this->container['ris_user_agent_string'];
+    }
+
+    /**
+     * Sets ris_user_agent_string
+     *
+     * @param string $ris_user_agent_string ris_user_agent_string
+     *
+     * @return $this
+     */
+    public function setRisUserAgentString($ris_user_agent_string)
+    {
+        $this->container['ris_user_agent_string'] = $ris_user_agent_string;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_device_screen_resolution
+     *
+     * @return string
+     */
+    public function getRisDeviceScreenResolution()
+    {
+        return $this->container['ris_device_screen_resolution'];
+    }
+
+    /**
+     * Sets ris_device_screen_resolution
+     *
+     * @param string $ris_device_screen_resolution ris_device_screen_resolution
+     *
+     * @return $this
+     */
+    public function setRisDeviceScreenResolution($ris_device_screen_resolution)
+    {
+        $this->container['ris_device_screen_resolution'] = $ris_device_screen_resolution;
 
         return $this;
     }
@@ -1609,337 +2125,121 @@ class ResponseModel implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets ris_pip_ipad
+     * Gets ris_browser
      *
      * @return string
      */
-    public function getRisPipIpad()
+    public function getRisBrowser()
     {
-        return $this->container['ris_pip_ipad'];
+        return $this->container['ris_browser'];
     }
 
     /**
-     * Sets ris_pip_ipad
+     * Sets ris_browser
      *
-     * @param string $ris_pip_ipad ris_pip_ipad
+     * @param string $ris_browser ris_browser
      *
      * @return $this
      */
-    public function setRisPipIpad($ris_pip_ipad)
+    public function setRisBrowser($ris_browser)
     {
-        $this->container['ris_pip_ipad'] = $ris_pip_ipad;
+        $this->container['ris_browser'] = $ris_browser;
 
         return $this;
     }
 
     /**
-     * Gets ris_pip_lat
+     * Gets ris_to_string
      *
      * @return string
      */
-    public function getRisPipLat()
+    public function getRisToString()
     {
-        return $this->container['ris_pip_lat'];
+        return $this->container['ris_to_string'];
     }
 
     /**
-     * Sets ris_pip_lat
+     * Sets ris_to_string
      *
-     * @param string $ris_pip_lat ris_pip_lat
+     * @param string $ris_to_string ris_to_string
      *
      * @return $this
      */
-    public function setRisPipLat($ris_pip_lat)
+    public function setRisToString($ris_to_string)
     {
-        $this->container['ris_pip_lat'] = $ris_pip_lat;
+        $this->container['ris_to_string'] = $ris_to_string;
 
         return $this;
     }
 
     /**
-     * Gets ris_pip_lon
+     * Gets rules_triggered
      *
-     * @return string
+     * @return map[string,object]
      */
-    public function getRisPipLon()
+    public function getRulesTriggered()
     {
-        return $this->container['ris_pip_lon'];
+        return $this->container['rules_triggered'];
     }
 
     /**
-     * Sets ris_pip_lon
+     * Sets rules_triggered
      *
-     * @param string $ris_pip_lon ris_pip_lon
+     * @param map[string,object] $rules_triggered rules_triggered
      *
      * @return $this
      */
-    public function setRisPipLon($ris_pip_lon)
+    public function setRulesTriggered($rules_triggered)
     {
-        $this->container['ris_pip_lon'] = $ris_pip_lon;
+        $this->container['rules_triggered'] = $rules_triggered;
 
         return $this;
     }
 
     /**
-     * Gets ris_pip_country
+     * Gets ris_number_rules_triggered
      *
-     * @return string
+     * @return int
      */
-    public function getRisPipCountry()
+    public function getRisNumberRulesTriggered()
     {
-        return $this->container['ris_pip_country'];
+        return $this->container['ris_number_rules_triggered'];
     }
 
     /**
-     * Sets ris_pip_country
+     * Sets ris_number_rules_triggered
      *
-     * @param string $ris_pip_country ris_pip_country
+     * @param int $ris_number_rules_triggered ris_number_rules_triggered
      *
      * @return $this
      */
-    public function setRisPipCountry($ris_pip_country)
+    public function setRisNumberRulesTriggered($ris_number_rules_triggered)
     {
-        $this->container['ris_pip_country'] = $ris_pip_country;
+        $this->container['ris_number_rules_triggered'] = $ris_number_rules_triggered;
 
         return $this;
     }
 
     /**
-     * Gets ris_pip_region
+     * Gets ris_warnings
      *
-     * @return string
+     * @return string[]
      */
-    public function getRisPipRegion()
+    public function getRisWarnings()
     {
-        return $this->container['ris_pip_region'];
+        return $this->container['ris_warnings'];
     }
 
     /**
-     * Sets ris_pip_region
+     * Sets ris_warnings
      *
-     * @param string $ris_pip_region ris_pip_region
+     * @param string[] $ris_warnings ris_warnings
      *
      * @return $this
      */
-    public function setRisPipRegion($ris_pip_region)
+    public function setRisWarnings($ris_warnings)
     {
-        $this->container['ris_pip_region'] = $ris_pip_region;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_pip_city
-     *
-     * @return string
-     */
-    public function getRisPipCity()
-    {
-        return $this->container['ris_pip_city'];
-    }
-
-    /**
-     * Sets ris_pip_city
-     *
-     * @param string $ris_pip_city ris_pip_city
-     *
-     * @return $this
-     */
-    public function setRisPipCity($ris_pip_city)
-    {
-        $this->container['ris_pip_city'] = $ris_pip_city;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_pip_org
-     *
-     * @return string
-     */
-    public function getRisPipOrg()
-    {
-        return $this->container['ris_pip_org'];
-    }
-
-    /**
-     * Sets ris_pip_org
-     *
-     * @param string $ris_pip_org ris_pip_org
-     *
-     * @return $this
-     */
-    public function setRisPipOrg($ris_pip_org)
-    {
-        $this->container['ris_pip_org'] = $ris_pip_org;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_ip_ipad
-     *
-     * @return string
-     */
-    public function getRisIpIpad()
-    {
-        return $this->container['ris_ip_ipad'];
-    }
-
-    /**
-     * Sets ris_ip_ipad
-     *
-     * @param string $ris_ip_ipad ris_ip_ipad
-     *
-     * @return $this
-     */
-    public function setRisIpIpad($ris_ip_ipad)
-    {
-        $this->container['ris_ip_ipad'] = $ris_ip_ipad;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_ip_lat
-     *
-     * @return string
-     */
-    public function getRisIpLat()
-    {
-        return $this->container['ris_ip_lat'];
-    }
-
-    /**
-     * Sets ris_ip_lat
-     *
-     * @param string $ris_ip_lat ris_ip_lat
-     *
-     * @return $this
-     */
-    public function setRisIpLat($ris_ip_lat)
-    {
-        $this->container['ris_ip_lat'] = $ris_ip_lat;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_ip_lon
-     *
-     * @return string
-     */
-    public function getRisIpLon()
-    {
-        return $this->container['ris_ip_lon'];
-    }
-
-    /**
-     * Sets ris_ip_lon
-     *
-     * @param string $ris_ip_lon ris_ip_lon
-     *
-     * @return $this
-     */
-    public function setRisIpLon($ris_ip_lon)
-    {
-        $this->container['ris_ip_lon'] = $ris_ip_lon;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_ip_country
-     *
-     * @return string
-     */
-    public function getRisIpCountry()
-    {
-        return $this->container['ris_ip_country'];
-    }
-
-    /**
-     * Sets ris_ip_country
-     *
-     * @param string $ris_ip_country ris_ip_country
-     *
-     * @return $this
-     */
-    public function setRisIpCountry($ris_ip_country)
-    {
-        $this->container['ris_ip_country'] = $ris_ip_country;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_ip_region
-     *
-     * @return string
-     */
-    public function getRisIpRegion()
-    {
-        return $this->container['ris_ip_region'];
-    }
-
-    /**
-     * Sets ris_ip_region
-     *
-     * @param string $ris_ip_region ris_ip_region
-     *
-     * @return $this
-     */
-    public function setRisIpRegion($ris_ip_region)
-    {
-        $this->container['ris_ip_region'] = $ris_ip_region;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_ip_city
-     *
-     * @return string
-     */
-    public function getRisIpCity()
-    {
-        return $this->container['ris_ip_city'];
-    }
-
-    /**
-     * Sets ris_ip_city
-     *
-     * @param string $ris_ip_city ris_ip_city
-     *
-     * @return $this
-     */
-    public function setRisIpCity($ris_ip_city)
-    {
-        $this->container['ris_ip_city'] = $ris_ip_city;
-
-        return $this;
-    }
-
-    /**
-     * Gets ris_ip_org
-     *
-     * @return string
-     */
-    public function getRisIpOrg()
-    {
-        return $this->container['ris_ip_org'];
-    }
-
-    /**
-     * Sets ris_ip_org
-     *
-     * @param string $ris_ip_org ris_ip_org
-     *
-     * @return $this
-     */
-    public function setRisIpOrg($ris_ip_org)
-    {
-        $this->container['ris_ip_org'] = $ris_ip_org;
+        $this->container['ris_warnings'] = $ris_warnings;
 
         return $this;
     }
@@ -1947,7 +2247,7 @@ class ResponseModel implements ModelInterface, ArrayAccess
     /**
      * Gets ris_warning_count
      *
-     * @return string
+     * @return int
      */
     public function getRisWarningCount()
     {
@@ -1957,13 +2257,373 @@ class ResponseModel implements ModelInterface, ArrayAccess
     /**
      * Sets ris_warning_count
      *
-     * @param string $ris_warning_count ris_warning_count
+     * @param int $ris_warning_count ris_warning_count
      *
      * @return $this
      */
     public function setRisWarningCount($ris_warning_count)
     {
         $this->container['ris_warning_count'] = $ris_warning_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_errors
+     *
+     * @return string[]
+     */
+    public function getRisErrors()
+    {
+        return $this->container['ris_errors'];
+    }
+
+    /**
+     * Sets ris_errors
+     *
+     * @param string[] $ris_errors ris_errors
+     *
+     * @return $this
+     */
+    public function setRisErrors($ris_errors)
+    {
+        $this->container['ris_errors'] = $ris_errors;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_error_count
+     *
+     * @return int
+     */
+    public function getRisErrorCount()
+    {
+        return $this->container['ris_error_count'];
+    }
+
+    /**
+     * Sets ris_error_count
+     *
+     * @param int $ris_error_count ris_error_count
+     *
+     * @return $this
+     */
+    public function setRisErrorCount($ris_error_count)
+    {
+        $this->container['ris_error_count'] = $ris_error_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_errors
+     *
+     * @return bool
+     */
+    public function getHasErrors()
+    {
+        return $this->container['has_errors'];
+    }
+
+    /**
+     * Sets has_errors
+     *
+     * @param bool $has_errors has_errors
+     *
+     * @return $this
+     */
+    public function setHasErrors($has_errors)
+    {
+        $this->container['has_errors'] = $has_errors;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_lexis_nexis_cbd_attributes
+     *
+     * @return map[string,object]
+     */
+    public function getRisLexisNexisCbdAttributes()
+    {
+        return $this->container['ris_lexis_nexis_cbd_attributes'];
+    }
+
+    /**
+     * Sets ris_lexis_nexis_cbd_attributes
+     *
+     * @param map[string,object] $ris_lexis_nexis_cbd_attributes ris_lexis_nexis_cbd_attributes
+     *
+     * @return $this
+     */
+    public function setRisLexisNexisCbdAttributes($ris_lexis_nexis_cbd_attributes)
+    {
+        $this->container['ris_lexis_nexis_cbd_attributes'] = $ris_lexis_nexis_cbd_attributes;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_lexis_nexis_instant_id_attributes
+     *
+     * @return map[string,object]
+     */
+    public function getRisLexisNexisInstantIdAttributes()
+    {
+        return $this->container['ris_lexis_nexis_instant_id_attributes'];
+    }
+
+    /**
+     * Sets ris_lexis_nexis_instant_id_attributes
+     *
+     * @param map[string,object] $ris_lexis_nexis_instant_id_attributes ris_lexis_nexis_instant_id_attributes
+     *
+     * @return $this
+     */
+    public function setRisLexisNexisInstantIdAttributes($ris_lexis_nexis_instant_id_attributes)
+    {
+        $this->container['ris_lexis_nexis_instant_id_attributes'] = $ris_lexis_nexis_instant_id_attributes;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_counters_triggered
+     *
+     * @return map[string,object]
+     */
+    public function getRisCountersTriggered()
+    {
+        return $this->container['ris_counters_triggered'];
+    }
+
+    /**
+     * Sets ris_counters_triggered
+     *
+     * @param map[string,object] $ris_counters_triggered ris_counters_triggered
+     *
+     * @return $this
+     */
+    public function setRisCountersTriggered($ris_counters_triggered)
+    {
+        $this->container['ris_counters_triggered'] = $ris_counters_triggered;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_number_counters_triggered
+     *
+     * @return int
+     */
+    public function getRisNumberCountersTriggered()
+    {
+        return $this->container['ris_number_counters_triggered'];
+    }
+
+    /**
+     * Sets ris_number_counters_triggered
+     *
+     * @param int $ris_number_counters_triggered ris_number_counters_triggered
+     *
+     * @return $this
+     */
+    public function setRisNumberCountersTriggered($ris_number_counters_triggered)
+    {
+        $this->container['ris_number_counters_triggered'] = $ris_number_counters_triggered;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_kount_central_customer_id
+     *
+     * @return string
+     */
+    public function getRisKountCentralCustomerId()
+    {
+        return $this->container['ris_kount_central_customer_id'];
+    }
+
+    /**
+     * Sets ris_kount_central_customer_id
+     *
+     * @param string $ris_kount_central_customer_id ris_kount_central_customer_id
+     *
+     * @return $this
+     */
+    public function setRisKountCentralCustomerId($ris_kount_central_customer_id)
+    {
+        $this->container['ris_kount_central_customer_id'] = $ris_kount_central_customer_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_kount_central_warnings
+     *
+     * @return string[]
+     */
+    public function getRisKountCentralWarnings()
+    {
+        return $this->container['ris_kount_central_warnings'];
+    }
+
+    /**
+     * Sets ris_kount_central_warnings
+     *
+     * @param string[] $ris_kount_central_warnings ris_kount_central_warnings
+     *
+     * @return $this
+     */
+    public function setRisKountCentralWarnings($ris_kount_central_warnings)
+    {
+        $this->container['ris_kount_central_warnings'] = $ris_kount_central_warnings;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_kount_central_warning_count
+     *
+     * @return int
+     */
+    public function getRisKountCentralWarningCount()
+    {
+        return $this->container['ris_kount_central_warning_count'];
+    }
+
+    /**
+     * Sets ris_kount_central_warning_count
+     *
+     * @param int $ris_kount_central_warning_count ris_kount_central_warning_count
+     *
+     * @return $this
+     */
+    public function setRisKountCentralWarningCount($ris_kount_central_warning_count)
+    {
+        $this->container['ris_kount_central_warning_count'] = $ris_kount_central_warning_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_kount_central_errors
+     *
+     * @return string[]
+     */
+    public function getRisKountCentralErrors()
+    {
+        return $this->container['ris_kount_central_errors'];
+    }
+
+    /**
+     * Sets ris_kount_central_errors
+     *
+     * @param string[] $ris_kount_central_errors ris_kount_central_errors
+     *
+     * @return $this
+     */
+    public function setRisKountCentralErrors($ris_kount_central_errors)
+    {
+        $this->container['ris_kount_central_errors'] = $ris_kount_central_errors;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_kount_central_error_count
+     *
+     * @return int
+     */
+    public function getRisKountCentralErrorCount()
+    {
+        return $this->container['ris_kount_central_error_count'];
+    }
+
+    /**
+     * Sets ris_kount_central_error_count
+     *
+     * @param int $ris_kount_central_error_count ris_kount_central_error_count
+     *
+     * @return $this
+     */
+    public function setRisKountCentralErrorCount($ris_kount_central_error_count)
+    {
+        $this->container['ris_kount_central_error_count'] = $ris_kount_central_error_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_kount_central_number_thresholds_triggered
+     *
+     * @return int
+     */
+    public function getRisKountCentralNumberThresholdsTriggered()
+    {
+        return $this->container['ris_kount_central_number_thresholds_triggered'];
+    }
+
+    /**
+     * Sets ris_kount_central_number_thresholds_triggered
+     *
+     * @param int $ris_kount_central_number_thresholds_triggered ris_kount_central_number_thresholds_triggered
+     *
+     * @return $this
+     */
+    public function setRisKountCentralNumberThresholdsTriggered($ris_kount_central_number_thresholds_triggered)
+    {
+        $this->container['ris_kount_central_number_thresholds_triggered'] = $ris_kount_central_number_thresholds_triggered;
+
+        return $this;
+    }
+
+    /**
+     * Gets ris_kount_central_decision
+     *
+     * @return string
+     */
+    public function getRisKountCentralDecision()
+    {
+        return $this->container['ris_kount_central_decision'];
+    }
+
+    /**
+     * Sets ris_kount_central_decision
+     *
+     * @param string $ris_kount_central_decision ris_kount_central_decision
+     *
+     * @return $this
+     */
+    public function setRisKountCentralDecision($ris_kount_central_decision)
+    {
+        $this->container['ris_kount_central_decision'] = $ris_kount_central_decision;
+
+        return $this;
+    }
+
+    /**
+     * Gets kount_central_threshold_events
+     *
+     * @return \PhpApi\Khash\KcEvent[]
+     */
+    public function getKountCentralThresholdEvents()
+    {
+        return $this->container['kount_central_threshold_events'];
+    }
+
+    /**
+     * Sets kount_central_threshold_events
+     *
+     * @param \PhpApi\Khash\KcEvent[] $kount_central_threshold_events kount_central_threshold_events
+     *
+     * @return $this
+     */
+    public function setKountCentralThresholdEvents($kount_central_threshold_events)
+    {
+        $this->container['kount_central_threshold_events'] = $kount_central_threshold_events;
 
         return $this;
     }

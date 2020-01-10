@@ -117,4 +117,18 @@ class ShippingAddressTest extends \PHPUnit_Framework_TestCase
     public function testPropertyCountry()
     {
     }
+
+    /**
+     * Test attribute "premise"
+     */
+    public function testPropertyPremise()
+    {
+    }
+
+    /**
+     * Test attribute "street"
+     */
+    public function testPropertyStreet()
+    {
+    }
 }

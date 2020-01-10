@@ -1,6 +1,6 @@
 <?php
 /**
- * BillingAddressTest
+ * CartItemTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace PhpApi;
 
 /**
- * BillingAddressTest Class Doc Comment
+ * CartItemTest Class Doc Comment
  *
  * @category    Class
- * @description BillingAddress
+ * @description Shopping cart item data object.&lt;br /&gt;&lt;b&gt;Author:&lt;/b&gt; Kount &lt;a&gt;custserv@kount.com&lt;/a&gt;;&lt;br /&gt;&lt;b&gt;Version:&lt;/b&gt; 7.0.0. &lt;br /&gt;&lt;b&gt;Copyright:&lt;/b&gt; 2010 Keynetics Inc &lt;br /&gt;
  * @package     PhpApi
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BillingAddressTest extends \PHPUnit_Framework_TestCase
+class CartItemTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,65 +70,44 @@ class BillingAddressTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "BillingAddress"
+     * Test "CartItem"
      */
-    public function testBillingAddress()
+    public function testCartItem()
     {
     }
 
     /**
-     * Test attribute "address1"
+     * Test attribute "product_type"
      */
-    public function testPropertyAddress1()
+    public function testPropertyProductType()
     {
     }
 
     /**
-     * Test attribute "address2"
+     * Test attribute "product_item"
      */
-    public function testPropertyAddress2()
+    public function testPropertyProductItem()
     {
     }
 
     /**
-     * Test attribute "city"
+     * Test attribute "product_description"
      */
-    public function testPropertyCity()
+    public function testPropertyProductDescription()
     {
     }
 
     /**
-     * Test attribute "state"
+     * Test attribute "product_quantity"
      */
-    public function testPropertyState()
+    public function testPropertyProductQuantity()
     {
     }
 
     /**
-     * Test attribute "postal_code"
+     * Test attribute "product_price"
      */
-    public function testPropertyPostalCode()
-    {
-    }
-
-    /**
-     * Test attribute "country"
-     */
-    public function testPropertyCountry()
-    {
-    }
-
-    /**
-     * Test attribute "premise"
-     */
-    public function testPropertyPremise()
-    {
-    }
-
-    /**
-     * Test attribute "street"
-     */
-    public function testPropertyStreet()
+    public function testPropertyProductPrice()
     {
     }
 }

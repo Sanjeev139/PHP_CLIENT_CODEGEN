@@ -57,10 +57,27 @@ class InquiryModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'card_no' => 'string',
+        'mode' => 'string',
+        'date_of_birth' => 'string',
+        'gender' => 'string',
+        'currency' => 'string',
+        'sdk_version' => 'string',
         'total' => 'int',
         'ip_address' => 'string',
+        'user_agent' => 'string',
         'email' => 'string',
+        'name' => 'string',
+        'unique' => 'string',
+        'set_epoch' => 'int',
+        'cash' => 'int',
+        'ship_type' => 'string',
+        'billing_phone_number' => 'string',
+        'shipping_phone_number' => 'string',
+        'shipping_name' => 'string',
+        'shipping_email' => 'string',
+        'anid' => 'string',
+        'website' => 'string',
+        'card_no' => 'string',
         'session_id' => 'string',
         'mack' => 'string',
         'product_type' => 'string',
@@ -68,30 +85,17 @@ class InquiryModel implements ModelInterface, ArrayAccess
         'product_description' => 'string',
         'product_quantity' => 'int',
         'product_price' => 'int',
-        'anid' => 'string',
-        'mode' => 'string',
         'customer_id' => 'string',
-        'date_of_birth' => 'string',
-        'gender' => 'string',
-        'currency' => 'string',
-        'sdk_version' => 'string',
-        'user_agent' => 'string',
-        'name' => 'string',
-        'unique' => 'string',
-        'set_epoch' => 'int',
-        'cash' => 'string',
-        'ship_type' => 'string',
-        'billing_phone_number' => 'string',
-        'shipping_phone_number' => 'string',
-        'shipping_name' => 'string',
-        'shipping_email' => 'string',
-        'website' => 'string',
         'cart' => 'string',
+        'cart_item' => '\PhpApi\Khash\CartItem[]',
         'billing_address' => '\PhpApi\Khash\BillingAddress[]',
-        'billing_address_with_premise' => '\PhpApi\Khash\BillingAddressWithPremise[]',
         'shipping_address' => '\PhpApi\Khash\ShippingAddress[]',
-        'shipping_address_with_premise' => '\PhpApi\Khash\ShippingAddressWithPremise[]',
-        'user_defined_field' => '\PhpApi\Khash\UserDefinedField[]'
+        'user_defined_field' => '\PhpApi\Khash\UserDefinedField[]',
+        'merchant_id' => 'int',
+        'api_key' => 'string',
+        'config_key' => 'string',
+        'url' => 'string',
+        'version' => 'string'
     ];
 
     /**
@@ -100,10 +104,27 @@ class InquiryModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'card_no' => null,
+        'mode' => null,
+        'date_of_birth' => null,
+        'gender' => null,
+        'currency' => null,
+        'sdk_version' => null,
         'total' => 'int32',
         'ip_address' => null,
+        'user_agent' => null,
         'email' => null,
+        'name' => null,
+        'unique' => null,
+        'set_epoch' => 'int64',
+        'cash' => 'int32',
+        'ship_type' => null,
+        'billing_phone_number' => null,
+        'shipping_phone_number' => null,
+        'shipping_name' => null,
+        'shipping_email' => null,
+        'anid' => null,
+        'website' => null,
+        'card_no' => null,
         'session_id' => null,
         'mack' => null,
         'product_type' => null,
@@ -111,30 +132,17 @@ class InquiryModel implements ModelInterface, ArrayAccess
         'product_description' => null,
         'product_quantity' => 'int64',
         'product_price' => 'int64',
-        'anid' => null,
-        'mode' => null,
         'customer_id' => null,
-        'date_of_birth' => null,
-        'gender' => null,
-        'currency' => null,
-        'sdk_version' => null,
-        'user_agent' => null,
-        'name' => null,
-        'unique' => null,
-        'set_epoch' => 'int64',
-        'cash' => null,
-        'ship_type' => null,
-        'billing_phone_number' => null,
-        'shipping_phone_number' => null,
-        'shipping_name' => null,
-        'shipping_email' => null,
-        'website' => null,
         'cart' => null,
+        'cart_item' => null,
         'billing_address' => null,
-        'billing_address_with_premise' => null,
         'shipping_address' => null,
-        'shipping_address_with_premise' => null,
-        'user_defined_field' => null
+        'user_defined_field' => null,
+        'merchant_id' => 'int32',
+        'api_key' => null,
+        'config_key' => null,
+        'url' => null,
+        'version' => null
     ];
 
     /**
@@ -164,25 +172,15 @@ class InquiryModel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'card_no' => 'CardNo',
-        'total' => 'Total',
-        'ip_address' => 'IpAddress',
-        'email' => 'Email',
-        'session_id' => 'SessionId',
-        'mack' => 'Mack',
-        'product_type' => 'ProductType',
-        'product_item' => 'ProductItem',
-        'product_description' => 'ProductDescription',
-        'product_quantity' => 'ProductQuantity',
-        'product_price' => 'ProductPrice',
-        'anid' => 'ANID',
         'mode' => 'Mode',
-        'customer_id' => 'CustomerId',
         'date_of_birth' => 'DateOfBirth',
         'gender' => 'Gender',
         'currency' => 'Currency',
         'sdk_version' => 'SdkVersion',
+        'total' => 'Total',
+        'ip_address' => 'IpAddress',
         'user_agent' => 'UserAgent',
+        'email' => 'Email',
         'name' => 'Name',
         'unique' => 'Unique',
         'set_epoch' => 'SetEpoch',
@@ -192,13 +190,27 @@ class InquiryModel implements ModelInterface, ArrayAccess
         'shipping_phone_number' => 'ShippingPhoneNumber',
         'shipping_name' => 'ShippingName',
         'shipping_email' => 'ShippingEmail',
+        'anid' => 'ANID',
         'website' => 'Website',
+        'card_no' => 'CardNo',
+        'session_id' => 'SessionId',
+        'mack' => 'Mack',
+        'product_type' => 'ProductType',
+        'product_item' => 'ProductItem',
+        'product_description' => 'ProductDescription',
+        'product_quantity' => 'ProductQuantity',
+        'product_price' => 'ProductPrice',
+        'customer_id' => 'CustomerId',
         'cart' => 'Cart',
+        'cart_item' => 'cartItem',
         'billing_address' => 'billingAddress',
-        'billing_address_with_premise' => 'billingAddressWithPremise',
         'shipping_address' => 'shippingAddress',
-        'shipping_address_with_premise' => 'shippingAddressWithPremise',
-        'user_defined_field' => 'userDefinedField'
+        'user_defined_field' => 'userDefinedField',
+        'merchant_id' => 'MerchantID',
+        'api_key' => 'ApiKey',
+        'config_key' => 'ConfigKey',
+        'url' => 'Url',
+        'version' => 'Version'
     ];
 
     /**
@@ -207,25 +219,15 @@ class InquiryModel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'card_no' => 'setCardNo',
-        'total' => 'setTotal',
-        'ip_address' => 'setIpAddress',
-        'email' => 'setEmail',
-        'session_id' => 'setSessionId',
-        'mack' => 'setMack',
-        'product_type' => 'setProductType',
-        'product_item' => 'setProductItem',
-        'product_description' => 'setProductDescription',
-        'product_quantity' => 'setProductQuantity',
-        'product_price' => 'setProductPrice',
-        'anid' => 'setAnid',
         'mode' => 'setMode',
-        'customer_id' => 'setCustomerId',
         'date_of_birth' => 'setDateOfBirth',
         'gender' => 'setGender',
         'currency' => 'setCurrency',
         'sdk_version' => 'setSdkVersion',
+        'total' => 'setTotal',
+        'ip_address' => 'setIpAddress',
         'user_agent' => 'setUserAgent',
+        'email' => 'setEmail',
         'name' => 'setName',
         'unique' => 'setUnique',
         'set_epoch' => 'setSetEpoch',
@@ -235,13 +237,27 @@ class InquiryModel implements ModelInterface, ArrayAccess
         'shipping_phone_number' => 'setShippingPhoneNumber',
         'shipping_name' => 'setShippingName',
         'shipping_email' => 'setShippingEmail',
+        'anid' => 'setAnid',
         'website' => 'setWebsite',
+        'card_no' => 'setCardNo',
+        'session_id' => 'setSessionId',
+        'mack' => 'setMack',
+        'product_type' => 'setProductType',
+        'product_item' => 'setProductItem',
+        'product_description' => 'setProductDescription',
+        'product_quantity' => 'setProductQuantity',
+        'product_price' => 'setProductPrice',
+        'customer_id' => 'setCustomerId',
         'cart' => 'setCart',
+        'cart_item' => 'setCartItem',
         'billing_address' => 'setBillingAddress',
-        'billing_address_with_premise' => 'setBillingAddressWithPremise',
         'shipping_address' => 'setShippingAddress',
-        'shipping_address_with_premise' => 'setShippingAddressWithPremise',
-        'user_defined_field' => 'setUserDefinedField'
+        'user_defined_field' => 'setUserDefinedField',
+        'merchant_id' => 'setMerchantId',
+        'api_key' => 'setApiKey',
+        'config_key' => 'setConfigKey',
+        'url' => 'setUrl',
+        'version' => 'setVersion'
     ];
 
     /**
@@ -250,25 +266,15 @@ class InquiryModel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'card_no' => 'getCardNo',
-        'total' => 'getTotal',
-        'ip_address' => 'getIpAddress',
-        'email' => 'getEmail',
-        'session_id' => 'getSessionId',
-        'mack' => 'getMack',
-        'product_type' => 'getProductType',
-        'product_item' => 'getProductItem',
-        'product_description' => 'getProductDescription',
-        'product_quantity' => 'getProductQuantity',
-        'product_price' => 'getProductPrice',
-        'anid' => 'getAnid',
         'mode' => 'getMode',
-        'customer_id' => 'getCustomerId',
         'date_of_birth' => 'getDateOfBirth',
         'gender' => 'getGender',
         'currency' => 'getCurrency',
         'sdk_version' => 'getSdkVersion',
+        'total' => 'getTotal',
+        'ip_address' => 'getIpAddress',
         'user_agent' => 'getUserAgent',
+        'email' => 'getEmail',
         'name' => 'getName',
         'unique' => 'getUnique',
         'set_epoch' => 'getSetEpoch',
@@ -278,13 +284,27 @@ class InquiryModel implements ModelInterface, ArrayAccess
         'shipping_phone_number' => 'getShippingPhoneNumber',
         'shipping_name' => 'getShippingName',
         'shipping_email' => 'getShippingEmail',
+        'anid' => 'getAnid',
         'website' => 'getWebsite',
+        'card_no' => 'getCardNo',
+        'session_id' => 'getSessionId',
+        'mack' => 'getMack',
+        'product_type' => 'getProductType',
+        'product_item' => 'getProductItem',
+        'product_description' => 'getProductDescription',
+        'product_quantity' => 'getProductQuantity',
+        'product_price' => 'getProductPrice',
+        'customer_id' => 'getCustomerId',
         'cart' => 'getCart',
+        'cart_item' => 'getCartItem',
         'billing_address' => 'getBillingAddress',
-        'billing_address_with_premise' => 'getBillingAddressWithPremise',
         'shipping_address' => 'getShippingAddress',
-        'shipping_address_with_premise' => 'getShippingAddressWithPremise',
-        'user_defined_field' => 'getUserDefinedField'
+        'user_defined_field' => 'getUserDefinedField',
+        'merchant_id' => 'getMerchantId',
+        'api_key' => 'getApiKey',
+        'config_key' => 'getConfigKey',
+        'url' => 'getUrl',
+        'version' => 'getVersion'
     ];
 
     /**
@@ -347,25 +367,15 @@ class InquiryModel implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['card_no'] = isset($data['card_no']) ? $data['card_no'] : null;
-        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
-        $this->container['ip_address'] = isset($data['ip_address']) ? $data['ip_address'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['session_id'] = isset($data['session_id']) ? $data['session_id'] : null;
-        $this->container['mack'] = isset($data['mack']) ? $data['mack'] : null;
-        $this->container['product_type'] = isset($data['product_type']) ? $data['product_type'] : null;
-        $this->container['product_item'] = isset($data['product_item']) ? $data['product_item'] : null;
-        $this->container['product_description'] = isset($data['product_description']) ? $data['product_description'] : null;
-        $this->container['product_quantity'] = isset($data['product_quantity']) ? $data['product_quantity'] : null;
-        $this->container['product_price'] = isset($data['product_price']) ? $data['product_price'] : null;
-        $this->container['anid'] = isset($data['anid']) ? $data['anid'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
-        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
         $this->container['date_of_birth'] = isset($data['date_of_birth']) ? $data['date_of_birth'] : null;
         $this->container['gender'] = isset($data['gender']) ? $data['gender'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['sdk_version'] = isset($data['sdk_version']) ? $data['sdk_version'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['ip_address'] = isset($data['ip_address']) ? $data['ip_address'] : null;
         $this->container['user_agent'] = isset($data['user_agent']) ? $data['user_agent'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['unique'] = isset($data['unique']) ? $data['unique'] : null;
         $this->container['set_epoch'] = isset($data['set_epoch']) ? $data['set_epoch'] : null;
@@ -375,13 +385,27 @@ class InquiryModel implements ModelInterface, ArrayAccess
         $this->container['shipping_phone_number'] = isset($data['shipping_phone_number']) ? $data['shipping_phone_number'] : null;
         $this->container['shipping_name'] = isset($data['shipping_name']) ? $data['shipping_name'] : null;
         $this->container['shipping_email'] = isset($data['shipping_email']) ? $data['shipping_email'] : null;
+        $this->container['anid'] = isset($data['anid']) ? $data['anid'] : null;
         $this->container['website'] = isset($data['website']) ? $data['website'] : null;
+        $this->container['card_no'] = isset($data['card_no']) ? $data['card_no'] : null;
+        $this->container['session_id'] = isset($data['session_id']) ? $data['session_id'] : null;
+        $this->container['mack'] = isset($data['mack']) ? $data['mack'] : null;
+        $this->container['product_type'] = isset($data['product_type']) ? $data['product_type'] : null;
+        $this->container['product_item'] = isset($data['product_item']) ? $data['product_item'] : null;
+        $this->container['product_description'] = isset($data['product_description']) ? $data['product_description'] : null;
+        $this->container['product_quantity'] = isset($data['product_quantity']) ? $data['product_quantity'] : null;
+        $this->container['product_price'] = isset($data['product_price']) ? $data['product_price'] : null;
+        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
         $this->container['cart'] = isset($data['cart']) ? $data['cart'] : null;
+        $this->container['cart_item'] = isset($data['cart_item']) ? $data['cart_item'] : null;
         $this->container['billing_address'] = isset($data['billing_address']) ? $data['billing_address'] : null;
-        $this->container['billing_address_with_premise'] = isset($data['billing_address_with_premise']) ? $data['billing_address_with_premise'] : null;
         $this->container['shipping_address'] = isset($data['shipping_address']) ? $data['shipping_address'] : null;
-        $this->container['shipping_address_with_premise'] = isset($data['shipping_address_with_premise']) ? $data['shipping_address_with_premise'] : null;
         $this->container['user_defined_field'] = isset($data['user_defined_field']) ? $data['user_defined_field'] : null;
+        $this->container['merchant_id'] = isset($data['merchant_id']) ? $data['merchant_id'] : null;
+        $this->container['api_key'] = isset($data['api_key']) ? $data['api_key'] : null;
+        $this->container['config_key'] = isset($data['config_key']) ? $data['config_key'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
     }
 
     /**
@@ -409,25 +433,121 @@ class InquiryModel implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets card_no
+     * Gets mode
      *
      * @return string
      */
-    public function getCardNo()
+    public function getMode()
     {
-        return $this->container['card_no'];
+        return $this->container['mode'];
     }
 
     /**
-     * Sets card_no
+     * Sets mode
      *
-     * @param string $card_no card_no
+     * @param string $mode mode
      *
      * @return $this
      */
-    public function setCardNo($card_no)
+    public function setMode($mode)
     {
-        $this->container['card_no'] = $card_no;
+        $this->container['mode'] = $mode;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_of_birth
+     *
+     * @return string
+     */
+    public function getDateOfBirth()
+    {
+        return $this->container['date_of_birth'];
+    }
+
+    /**
+     * Sets date_of_birth
+     *
+     * @param string $date_of_birth date_of_birth
+     *
+     * @return $this
+     */
+    public function setDateOfBirth($date_of_birth)
+    {
+        $this->container['date_of_birth'] = $date_of_birth;
+
+        return $this;
+    }
+
+    /**
+     * Gets gender
+     *
+     * @return string
+     */
+    public function getGender()
+    {
+        return $this->container['gender'];
+    }
+
+    /**
+     * Sets gender
+     *
+     * @param string $gender gender
+     *
+     * @return $this
+     */
+    public function setGender($gender)
+    {
+        $this->container['gender'] = $gender;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency
+     *
+     * @return string
+     */
+    public function getCurrency()
+    {
+        return $this->container['currency'];
+    }
+
+    /**
+     * Sets currency
+     *
+     * @param string $currency currency
+     *
+     * @return $this
+     */
+    public function setCurrency($currency)
+    {
+        $this->container['currency'] = $currency;
+
+        return $this;
+    }
+
+    /**
+     * Gets sdk_version
+     *
+     * @return string
+     */
+    public function getSdkVersion()
+    {
+        return $this->container['sdk_version'];
+    }
+
+    /**
+     * Sets sdk_version
+     *
+     * @param string $sdk_version sdk_version
+     *
+     * @return $this
+     */
+    public function setSdkVersion($sdk_version)
+    {
+        $this->container['sdk_version'] = $sdk_version;
 
         return $this;
     }
@@ -481,6 +601,30 @@ class InquiryModel implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets user_agent
+     *
+     * @return string
+     */
+    public function getUserAgent()
+    {
+        return $this->container['user_agent'];
+    }
+
+    /**
+     * Sets user_agent
+     *
+     * @param string $user_agent user_agent
+     *
+     * @return $this
+     */
+    public function setUserAgent($user_agent)
+    {
+        $this->container['user_agent'] = $user_agent;
+
+        return $this;
+    }
+
+    /**
      * Gets email
      *
      * @return string
@@ -500,6 +644,294 @@ class InquiryModel implements ModelInterface, ArrayAccess
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name name
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets unique
+     *
+     * @return string
+     */
+    public function getUnique()
+    {
+        return $this->container['unique'];
+    }
+
+    /**
+     * Sets unique
+     *
+     * @param string $unique unique
+     *
+     * @return $this
+     */
+    public function setUnique($unique)
+    {
+        $this->container['unique'] = $unique;
+
+        return $this;
+    }
+
+    /**
+     * Gets set_epoch
+     *
+     * @return int
+     */
+    public function getSetEpoch()
+    {
+        return $this->container['set_epoch'];
+    }
+
+    /**
+     * Sets set_epoch
+     *
+     * @param int $set_epoch set_epoch
+     *
+     * @return $this
+     */
+    public function setSetEpoch($set_epoch)
+    {
+        $this->container['set_epoch'] = $set_epoch;
+
+        return $this;
+    }
+
+    /**
+     * Gets cash
+     *
+     * @return int
+     */
+    public function getCash()
+    {
+        return $this->container['cash'];
+    }
+
+    /**
+     * Sets cash
+     *
+     * @param int $cash cash
+     *
+     * @return $this
+     */
+    public function setCash($cash)
+    {
+        $this->container['cash'] = $cash;
+
+        return $this;
+    }
+
+    /**
+     * Gets ship_type
+     *
+     * @return string
+     */
+    public function getShipType()
+    {
+        return $this->container['ship_type'];
+    }
+
+    /**
+     * Sets ship_type
+     *
+     * @param string $ship_type ship_type
+     *
+     * @return $this
+     */
+    public function setShipType($ship_type)
+    {
+        $this->container['ship_type'] = $ship_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets billing_phone_number
+     *
+     * @return string
+     */
+    public function getBillingPhoneNumber()
+    {
+        return $this->container['billing_phone_number'];
+    }
+
+    /**
+     * Sets billing_phone_number
+     *
+     * @param string $billing_phone_number billing_phone_number
+     *
+     * @return $this
+     */
+    public function setBillingPhoneNumber($billing_phone_number)
+    {
+        $this->container['billing_phone_number'] = $billing_phone_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets shipping_phone_number
+     *
+     * @return string
+     */
+    public function getShippingPhoneNumber()
+    {
+        return $this->container['shipping_phone_number'];
+    }
+
+    /**
+     * Sets shipping_phone_number
+     *
+     * @param string $shipping_phone_number shipping_phone_number
+     *
+     * @return $this
+     */
+    public function setShippingPhoneNumber($shipping_phone_number)
+    {
+        $this->container['shipping_phone_number'] = $shipping_phone_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets shipping_name
+     *
+     * @return string
+     */
+    public function getShippingName()
+    {
+        return $this->container['shipping_name'];
+    }
+
+    /**
+     * Sets shipping_name
+     *
+     * @param string $shipping_name shipping_name
+     *
+     * @return $this
+     */
+    public function setShippingName($shipping_name)
+    {
+        $this->container['shipping_name'] = $shipping_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets shipping_email
+     *
+     * @return string
+     */
+    public function getShippingEmail()
+    {
+        return $this->container['shipping_email'];
+    }
+
+    /**
+     * Sets shipping_email
+     *
+     * @param string $shipping_email shipping_email
+     *
+     * @return $this
+     */
+    public function setShippingEmail($shipping_email)
+    {
+        $this->container['shipping_email'] = $shipping_email;
+
+        return $this;
+    }
+
+    /**
+     * Gets anid
+     *
+     * @return string
+     */
+    public function getAnid()
+    {
+        return $this->container['anid'];
+    }
+
+    /**
+     * Sets anid
+     *
+     * @param string $anid anid
+     *
+     * @return $this
+     */
+    public function setAnid($anid)
+    {
+        $this->container['anid'] = $anid;
+
+        return $this;
+    }
+
+    /**
+     * Gets website
+     *
+     * @return string
+     */
+    public function getWebsite()
+    {
+        return $this->container['website'];
+    }
+
+    /**
+     * Sets website
+     *
+     * @param string $website website
+     *
+     * @return $this
+     */
+    public function setWebsite($website)
+    {
+        $this->container['website'] = $website;
+
+        return $this;
+    }
+
+    /**
+     * Gets card_no
+     *
+     * @return string
+     */
+    public function getCardNo()
+    {
+        return $this->container['card_no'];
+    }
+
+    /**
+     * Sets card_no
+     *
+     * @param string $card_no card_no
+     *
+     * @return $this
+     */
+    public function setCardNo($card_no)
+    {
+        $this->container['card_no'] = $card_no;
 
         return $this;
     }
@@ -673,54 +1105,6 @@ class InquiryModel implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets anid
-     *
-     * @return string
-     */
-    public function getAnid()
-    {
-        return $this->container['anid'];
-    }
-
-    /**
-     * Sets anid
-     *
-     * @param string $anid anid
-     *
-     * @return $this
-     */
-    public function setAnid($anid)
-    {
-        $this->container['anid'] = $anid;
-
-        return $this;
-    }
-
-    /**
-     * Gets mode
-     *
-     * @return string
-     */
-    public function getMode()
-    {
-        return $this->container['mode'];
-    }
-
-    /**
-     * Sets mode
-     *
-     * @param string $mode mode
-     *
-     * @return $this
-     */
-    public function setMode($mode)
-    {
-        $this->container['mode'] = $mode;
-
-        return $this;
-    }
-
-    /**
      * Gets customer_id
      *
      * @return string
@@ -740,366 +1124,6 @@ class InquiryModel implements ModelInterface, ArrayAccess
     public function setCustomerId($customer_id)
     {
         $this->container['customer_id'] = $customer_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets date_of_birth
-     *
-     * @return string
-     */
-    public function getDateOfBirth()
-    {
-        return $this->container['date_of_birth'];
-    }
-
-    /**
-     * Sets date_of_birth
-     *
-     * @param string $date_of_birth date_of_birth
-     *
-     * @return $this
-     */
-    public function setDateOfBirth($date_of_birth)
-    {
-        $this->container['date_of_birth'] = $date_of_birth;
-
-        return $this;
-    }
-
-    /**
-     * Gets gender
-     *
-     * @return string
-     */
-    public function getGender()
-    {
-        return $this->container['gender'];
-    }
-
-    /**
-     * Sets gender
-     *
-     * @param string $gender gender
-     *
-     * @return $this
-     */
-    public function setGender($gender)
-    {
-        $this->container['gender'] = $gender;
-
-        return $this;
-    }
-
-    /**
-     * Gets currency
-     *
-     * @return string
-     */
-    public function getCurrency()
-    {
-        return $this->container['currency'];
-    }
-
-    /**
-     * Sets currency
-     *
-     * @param string $currency currency
-     *
-     * @return $this
-     */
-    public function setCurrency($currency)
-    {
-        $this->container['currency'] = $currency;
-
-        return $this;
-    }
-
-    /**
-     * Gets sdk_version
-     *
-     * @return string
-     */
-    public function getSdkVersion()
-    {
-        return $this->container['sdk_version'];
-    }
-
-    /**
-     * Sets sdk_version
-     *
-     * @param string $sdk_version sdk_version
-     *
-     * @return $this
-     */
-    public function setSdkVersion($sdk_version)
-    {
-        $this->container['sdk_version'] = $sdk_version;
-
-        return $this;
-    }
-
-    /**
-     * Gets user_agent
-     *
-     * @return string
-     */
-    public function getUserAgent()
-    {
-        return $this->container['user_agent'];
-    }
-
-    /**
-     * Sets user_agent
-     *
-     * @param string $user_agent user_agent
-     *
-     * @return $this
-     */
-    public function setUserAgent($user_agent)
-    {
-        $this->container['user_agent'] = $user_agent;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets unique
-     *
-     * @return string
-     */
-    public function getUnique()
-    {
-        return $this->container['unique'];
-    }
-
-    /**
-     * Sets unique
-     *
-     * @param string $unique unique
-     *
-     * @return $this
-     */
-    public function setUnique($unique)
-    {
-        $this->container['unique'] = $unique;
-
-        return $this;
-    }
-
-    /**
-     * Gets set_epoch
-     *
-     * @return int
-     */
-    public function getSetEpoch()
-    {
-        return $this->container['set_epoch'];
-    }
-
-    /**
-     * Sets set_epoch
-     *
-     * @param int $set_epoch set_epoch
-     *
-     * @return $this
-     */
-    public function setSetEpoch($set_epoch)
-    {
-        $this->container['set_epoch'] = $set_epoch;
-
-        return $this;
-    }
-
-    /**
-     * Gets cash
-     *
-     * @return string
-     */
-    public function getCash()
-    {
-        return $this->container['cash'];
-    }
-
-    /**
-     * Sets cash
-     *
-     * @param string $cash cash
-     *
-     * @return $this
-     */
-    public function setCash($cash)
-    {
-        $this->container['cash'] = $cash;
-
-        return $this;
-    }
-
-    /**
-     * Gets ship_type
-     *
-     * @return string
-     */
-    public function getShipType()
-    {
-        return $this->container['ship_type'];
-    }
-
-    /**
-     * Sets ship_type
-     *
-     * @param string $ship_type ship_type
-     *
-     * @return $this
-     */
-    public function setShipType($ship_type)
-    {
-        $this->container['ship_type'] = $ship_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets billing_phone_number
-     *
-     * @return string
-     */
-    public function getBillingPhoneNumber()
-    {
-        return $this->container['billing_phone_number'];
-    }
-
-    /**
-     * Sets billing_phone_number
-     *
-     * @param string $billing_phone_number billing_phone_number
-     *
-     * @return $this
-     */
-    public function setBillingPhoneNumber($billing_phone_number)
-    {
-        $this->container['billing_phone_number'] = $billing_phone_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets shipping_phone_number
-     *
-     * @return string
-     */
-    public function getShippingPhoneNumber()
-    {
-        return $this->container['shipping_phone_number'];
-    }
-
-    /**
-     * Sets shipping_phone_number
-     *
-     * @param string $shipping_phone_number shipping_phone_number
-     *
-     * @return $this
-     */
-    public function setShippingPhoneNumber($shipping_phone_number)
-    {
-        $this->container['shipping_phone_number'] = $shipping_phone_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets shipping_name
-     *
-     * @return string
-     */
-    public function getShippingName()
-    {
-        return $this->container['shipping_name'];
-    }
-
-    /**
-     * Sets shipping_name
-     *
-     * @param string $shipping_name shipping_name
-     *
-     * @return $this
-     */
-    public function setShippingName($shipping_name)
-    {
-        $this->container['shipping_name'] = $shipping_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets shipping_email
-     *
-     * @return string
-     */
-    public function getShippingEmail()
-    {
-        return $this->container['shipping_email'];
-    }
-
-    /**
-     * Sets shipping_email
-     *
-     * @param string $shipping_email shipping_email
-     *
-     * @return $this
-     */
-    public function setShippingEmail($shipping_email)
-    {
-        $this->container['shipping_email'] = $shipping_email;
-
-        return $this;
-    }
-
-    /**
-     * Gets website
-     *
-     * @return string
-     */
-    public function getWebsite()
-    {
-        return $this->container['website'];
-    }
-
-    /**
-     * Sets website
-     *
-     * @param string $website website
-     *
-     * @return $this
-     */
-    public function setWebsite($website)
-    {
-        $this->container['website'] = $website;
 
         return $this;
     }
@@ -1129,6 +1153,30 @@ class InquiryModel implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets cart_item
+     *
+     * @return \PhpApi\Khash\CartItem[]
+     */
+    public function getCartItem()
+    {
+        return $this->container['cart_item'];
+    }
+
+    /**
+     * Sets cart_item
+     *
+     * @param \PhpApi\Khash\CartItem[] $cart_item cart_item
+     *
+     * @return $this
+     */
+    public function setCartItem($cart_item)
+    {
+        $this->container['cart_item'] = $cart_item;
+
+        return $this;
+    }
+
+    /**
      * Gets billing_address
      *
      * @return \PhpApi\Khash\BillingAddress[]
@@ -1148,30 +1196,6 @@ class InquiryModel implements ModelInterface, ArrayAccess
     public function setBillingAddress($billing_address)
     {
         $this->container['billing_address'] = $billing_address;
-
-        return $this;
-    }
-
-    /**
-     * Gets billing_address_with_premise
-     *
-     * @return \PhpApi\Khash\BillingAddressWithPremise[]
-     */
-    public function getBillingAddressWithPremise()
-    {
-        return $this->container['billing_address_with_premise'];
-    }
-
-    /**
-     * Sets billing_address_with_premise
-     *
-     * @param \PhpApi\Khash\BillingAddressWithPremise[] $billing_address_with_premise billing_address_with_premise
-     *
-     * @return $this
-     */
-    public function setBillingAddressWithPremise($billing_address_with_premise)
-    {
-        $this->container['billing_address_with_premise'] = $billing_address_with_premise;
 
         return $this;
     }
@@ -1201,30 +1225,6 @@ class InquiryModel implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets shipping_address_with_premise
-     *
-     * @return \PhpApi\Khash\ShippingAddressWithPremise[]
-     */
-    public function getShippingAddressWithPremise()
-    {
-        return $this->container['shipping_address_with_premise'];
-    }
-
-    /**
-     * Sets shipping_address_with_premise
-     *
-     * @param \PhpApi\Khash\ShippingAddressWithPremise[] $shipping_address_with_premise shipping_address_with_premise
-     *
-     * @return $this
-     */
-    public function setShippingAddressWithPremise($shipping_address_with_premise)
-    {
-        $this->container['shipping_address_with_premise'] = $shipping_address_with_premise;
-
-        return $this;
-    }
-
-    /**
      * Gets user_defined_field
      *
      * @return \PhpApi\Khash\UserDefinedField[]
@@ -1244,6 +1244,126 @@ class InquiryModel implements ModelInterface, ArrayAccess
     public function setUserDefinedField($user_defined_field)
     {
         $this->container['user_defined_field'] = $user_defined_field;
+
+        return $this;
+    }
+
+    /**
+     * Gets merchant_id
+     *
+     * @return int
+     */
+    public function getMerchantId()
+    {
+        return $this->container['merchant_id'];
+    }
+
+    /**
+     * Sets merchant_id
+     *
+     * @param int $merchant_id merchant_id
+     *
+     * @return $this
+     */
+    public function setMerchantId($merchant_id)
+    {
+        $this->container['merchant_id'] = $merchant_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets api_key
+     *
+     * @return string
+     */
+    public function getApiKey()
+    {
+        return $this->container['api_key'];
+    }
+
+    /**
+     * Sets api_key
+     *
+     * @param string $api_key api_key
+     *
+     * @return $this
+     */
+    public function setApiKey($api_key)
+    {
+        $this->container['api_key'] = $api_key;
+
+        return $this;
+    }
+
+    /**
+     * Gets config_key
+     *
+     * @return string
+     */
+    public function getConfigKey()
+    {
+        return $this->container['config_key'];
+    }
+
+    /**
+     * Sets config_key
+     *
+     * @param string $config_key config_key
+     *
+     * @return $this
+     */
+    public function setConfigKey($config_key)
+    {
+        $this->container['config_key'] = $config_key;
+
+        return $this;
+    }
+
+    /**
+     * Gets url
+     *
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->container['url'];
+    }
+
+    /**
+     * Sets url
+     *
+     * @param string $url url
+     *
+     * @return $this
+     */
+    public function setUrl($url)
+    {
+        $this->container['url'] = $url;
+
+        return $this;
+    }
+
+    /**
+     * Gets version
+     *
+     * @return string
+     */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+     * Sets version
+     *
+     * @param string $version version
+     *
+     * @return $this
+     */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
 
         return $this;
     }

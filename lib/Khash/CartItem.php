@@ -1,6 +1,6 @@
 <?php
 /**
- * BillingAddress
+ * CartItem
  *
  * PHP version 5
  *
@@ -33,14 +33,15 @@ use \ArrayAccess;
 use \PhpApi\ObjectSerializer;
 
 /**
- * BillingAddress Class Doc Comment
+ * CartItem Class Doc Comment
  *
  * @category Class
+ * @description Shopping cart item data object.&lt;br /&gt;&lt;b&gt;Author:&lt;/b&gt; Kount &lt;a&gt;custserv@kount.com&lt;/a&gt;;&lt;br /&gt;&lt;b&gt;Version:&lt;/b&gt; 7.0.0. &lt;br /&gt;&lt;b&gt;Copyright:&lt;/b&gt; 2010 Keynetics Inc &lt;br /&gt;
  * @package  PhpApi
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class BillingAddress implements ModelInterface, ArrayAccess
+class CartItem implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +50,7 @@ class BillingAddress implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'BillingAddress';
+    protected static $swaggerModelName = 'CartItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,14 +58,11 @@ class BillingAddress implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address1' => 'string',
-        'address2' => 'string',
-        'city' => 'string',
-        'state' => 'string',
-        'postal_code' => 'string',
-        'country' => 'string',
-        'premise' => 'string',
-        'street' => 'string'
+        'product_type' => 'string',
+        'product_item' => 'string',
+        'product_description' => 'string',
+        'product_quantity' => 'int',
+        'product_price' => 'int'
     ];
 
     /**
@@ -73,14 +71,11 @@ class BillingAddress implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'address1' => null,
-        'address2' => null,
-        'city' => null,
-        'state' => null,
-        'postal_code' => null,
-        'country' => null,
-        'premise' => null,
-        'street' => null
+        'product_type' => null,
+        'product_item' => null,
+        'product_description' => null,
+        'product_quantity' => 'int64',
+        'product_price' => 'int64'
     ];
 
     /**
@@ -110,14 +105,11 @@ class BillingAddress implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'address1' => 'address1',
-        'address2' => 'address2',
-        'city' => 'city',
-        'state' => 'state',
-        'postal_code' => 'postalCode',
-        'country' => 'country',
-        'premise' => 'premise',
-        'street' => 'street'
+        'product_type' => 'ProductType',
+        'product_item' => 'ProductItem',
+        'product_description' => 'ProductDescription',
+        'product_quantity' => 'ProductQuantity',
+        'product_price' => 'ProductPrice'
     ];
 
     /**
@@ -126,14 +118,11 @@ class BillingAddress implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'address1' => 'setAddress1',
-        'address2' => 'setAddress2',
-        'city' => 'setCity',
-        'state' => 'setState',
-        'postal_code' => 'setPostalCode',
-        'country' => 'setCountry',
-        'premise' => 'setPremise',
-        'street' => 'setStreet'
+        'product_type' => 'setProductType',
+        'product_item' => 'setProductItem',
+        'product_description' => 'setProductDescription',
+        'product_quantity' => 'setProductQuantity',
+        'product_price' => 'setProductPrice'
     ];
 
     /**
@@ -142,14 +131,11 @@ class BillingAddress implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'address1' => 'getAddress1',
-        'address2' => 'getAddress2',
-        'city' => 'getCity',
-        'state' => 'getState',
-        'postal_code' => 'getPostalCode',
-        'country' => 'getCountry',
-        'premise' => 'getPremise',
-        'street' => 'getStreet'
+        'product_type' => 'getProductType',
+        'product_item' => 'getProductItem',
+        'product_description' => 'getProductDescription',
+        'product_quantity' => 'getProductQuantity',
+        'product_price' => 'getProductPrice'
     ];
 
     /**
@@ -212,14 +198,11 @@ class BillingAddress implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['address1'] = isset($data['address1']) ? $data['address1'] : null;
-        $this->container['address2'] = isset($data['address2']) ? $data['address2'] : null;
-        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
-        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
-        $this->container['postal_code'] = isset($data['postal_code']) ? $data['postal_code'] : null;
-        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
-        $this->container['premise'] = isset($data['premise']) ? $data['premise'] : null;
-        $this->container['street'] = isset($data['street']) ? $data['street'] : null;
+        $this->container['product_type'] = isset($data['product_type']) ? $data['product_type'] : null;
+        $this->container['product_item'] = isset($data['product_item']) ? $data['product_item'] : null;
+        $this->container['product_description'] = isset($data['product_description']) ? $data['product_description'] : null;
+        $this->container['product_quantity'] = isset($data['product_quantity']) ? $data['product_quantity'] : null;
+        $this->container['product_price'] = isset($data['product_price']) ? $data['product_price'] : null;
     }
 
     /**
@@ -247,193 +230,121 @@ class BillingAddress implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets address1
+     * Gets product_type
      *
      * @return string
      */
-    public function getAddress1()
+    public function getProductType()
     {
-        return $this->container['address1'];
+        return $this->container['product_type'];
     }
 
     /**
-     * Sets address1
+     * Sets product_type
      *
-     * @param string $address1 address1
+     * @param string $product_type Gets or sets product type
      *
      * @return $this
      */
-    public function setAddress1($address1)
+    public function setProductType($product_type)
     {
-        $this->container['address1'] = $address1;
+        $this->container['product_type'] = $product_type;
 
         return $this;
     }
 
     /**
-     * Gets address2
+     * Gets product_item
      *
      * @return string
      */
-    public function getAddress2()
+    public function getProductItem()
     {
-        return $this->container['address2'];
+        return $this->container['product_item'];
     }
 
     /**
-     * Sets address2
+     * Sets product_item
      *
-     * @param string $address2 address2
+     * @param string $product_item Gets or sets the product item
      *
      * @return $this
      */
-    public function setAddress2($address2)
+    public function setProductItem($product_item)
     {
-        $this->container['address2'] = $address2;
+        $this->container['product_item'] = $product_item;
 
         return $this;
     }
 
     /**
-     * Gets city
+     * Gets product_description
      *
      * @return string
      */
-    public function getCity()
+    public function getProductDescription()
     {
-        return $this->container['city'];
+        return $this->container['product_description'];
     }
 
     /**
-     * Sets city
+     * Sets product_description
      *
-     * @param string $city city
+     * @param string $product_description Gets or sets the product description
      *
      * @return $this
      */
-    public function setCity($city)
+    public function setProductDescription($product_description)
     {
-        $this->container['city'] = $city;
+        $this->container['product_description'] = $product_description;
 
         return $this;
     }
 
     /**
-     * Gets state
+     * Gets product_quantity
      *
-     * @return string
+     * @return int
      */
-    public function getState()
+    public function getProductQuantity()
     {
-        return $this->container['state'];
+        return $this->container['product_quantity'];
     }
 
     /**
-     * Sets state
+     * Sets product_quantity
      *
-     * @param string $state state
+     * @param int $product_quantity Gets or sets the product quantity
      *
      * @return $this
      */
-    public function setState($state)
+    public function setProductQuantity($product_quantity)
     {
-        $this->container['state'] = $state;
+        $this->container['product_quantity'] = $product_quantity;
 
         return $this;
     }
 
     /**
-     * Gets postal_code
+     * Gets product_price
      *
-     * @return string
+     * @return int
      */
-    public function getPostalCode()
+    public function getProductPrice()
     {
-        return $this->container['postal_code'];
+        return $this->container['product_price'];
     }
 
     /**
-     * Sets postal_code
+     * Sets product_price
      *
-     * @param string $postal_code postal_code
+     * @param int $product_price Gets or sets the product price
      *
      * @return $this
      */
-    public function setPostalCode($postal_code)
+    public function setProductPrice($product_price)
     {
-        $this->container['postal_code'] = $postal_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets country
-     *
-     * @return string
-     */
-    public function getCountry()
-    {
-        return $this->container['country'];
-    }
-
-    /**
-     * Sets country
-     *
-     * @param string $country country
-     *
-     * @return $this
-     */
-    public function setCountry($country)
-    {
-        $this->container['country'] = $country;
-
-        return $this;
-    }
-
-    /**
-     * Gets premise
-     *
-     * @return string
-     */
-    public function getPremise()
-    {
-        return $this->container['premise'];
-    }
-
-    /**
-     * Sets premise
-     *
-     * @param string $premise premise
-     *
-     * @return $this
-     */
-    public function setPremise($premise)
-    {
-        $this->container['premise'] = $premise;
-
-        return $this;
-    }
-
-    /**
-     * Gets street
-     *
-     * @return string
-     */
-    public function getStreet()
-    {
-        return $this->container['street'];
-    }
-
-    /**
-     * Sets street
-     *
-     * @param string $street street
-     *
-     * @return $this
-     */
-    public function setStreet($street)
-    {
-        $this->container['street'] = $street;
+        $this->container['product_price'] = $product_price;
 
         return $this;
     }

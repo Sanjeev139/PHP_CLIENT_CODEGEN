@@ -77,100 +77,9 @@ class InquiryModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "card_no"
-     */
-    public function testPropertyCardNo()
-    {
-    }
-
-    /**
-     * Test attribute "total"
-     */
-    public function testPropertyTotal()
-    {
-    }
-
-    /**
-     * Test attribute "ip_address"
-     */
-    public function testPropertyIpAddress()
-    {
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-    }
-
-    /**
-     * Test attribute "session_id"
-     */
-    public function testPropertySessionId()
-    {
-    }
-
-    /**
-     * Test attribute "mack"
-     */
-    public function testPropertyMack()
-    {
-    }
-
-    /**
-     * Test attribute "product_type"
-     */
-    public function testPropertyProductType()
-    {
-    }
-
-    /**
-     * Test attribute "product_item"
-     */
-    public function testPropertyProductItem()
-    {
-    }
-
-    /**
-     * Test attribute "product_description"
-     */
-    public function testPropertyProductDescription()
-    {
-    }
-
-    /**
-     * Test attribute "product_quantity"
-     */
-    public function testPropertyProductQuantity()
-    {
-    }
-
-    /**
-     * Test attribute "product_price"
-     */
-    public function testPropertyProductPrice()
-    {
-    }
-
-    /**
-     * Test attribute "anid"
-     */
-    public function testPropertyAnid()
-    {
-    }
-
-    /**
      * Test attribute "mode"
      */
     public function testPropertyMode()
-    {
-    }
-
-    /**
-     * Test attribute "customer_id"
-     */
-    public function testPropertyCustomerId()
     {
     }
 
@@ -203,9 +112,30 @@ class InquiryModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "total"
+     */
+    public function testPropertyTotal()
+    {
+    }
+
+    /**
+     * Test attribute "ip_address"
+     */
+    public function testPropertyIpAddress()
+    {
+    }
+
+    /**
      * Test attribute "user_agent"
      */
     public function testPropertyUserAgent()
+    {
+    }
+
+    /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
     {
     }
 
@@ -273,9 +203,79 @@ class InquiryModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "anid"
+     */
+    public function testPropertyAnid()
+    {
+    }
+
+    /**
      * Test attribute "website"
      */
     public function testPropertyWebsite()
+    {
+    }
+
+    /**
+     * Test attribute "card_no"
+     */
+    public function testPropertyCardNo()
+    {
+    }
+
+    /**
+     * Test attribute "session_id"
+     */
+    public function testPropertySessionId()
+    {
+    }
+
+    /**
+     * Test attribute "mack"
+     */
+    public function testPropertyMack()
+    {
+    }
+
+    /**
+     * Test attribute "product_type"
+     */
+    public function testPropertyProductType()
+    {
+    }
+
+    /**
+     * Test attribute "product_item"
+     */
+    public function testPropertyProductItem()
+    {
+    }
+
+    /**
+     * Test attribute "product_description"
+     */
+    public function testPropertyProductDescription()
+    {
+    }
+
+    /**
+     * Test attribute "product_quantity"
+     */
+    public function testPropertyProductQuantity()
+    {
+    }
+
+    /**
+     * Test attribute "product_price"
+     */
+    public function testPropertyProductPrice()
+    {
+    }
+
+    /**
+     * Test attribute "customer_id"
+     */
+    public function testPropertyCustomerId()
     {
     }
 
@@ -287,16 +287,16 @@ class InquiryModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "billing_address"
+     * Test attribute "cart_item"
      */
-    public function testPropertyBillingAddress()
+    public function testPropertyCartItem()
     {
     }
 
     /**
-     * Test attribute "billing_address_with_premise"
+     * Test attribute "billing_address"
      */
-    public function testPropertyBillingAddressWithPremise()
+    public function testPropertyBillingAddress()
     {
     }
 
@@ -308,16 +308,44 @@ class InquiryModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "shipping_address_with_premise"
+     * Test attribute "user_defined_field"
      */
-    public function testPropertyShippingAddressWithPremise()
+    public function testPropertyUserDefinedField()
     {
     }
 
     /**
-     * Test attribute "user_defined_field"
+     * Test attribute "merchant_id"
      */
-    public function testPropertyUserDefinedField()
+    public function testPropertyMerchantId()
+    {
+    }
+
+    /**
+     * Test attribute "api_key"
+     */
+    public function testPropertyApiKey()
+    {
+    }
+
+    /**
+     * Test attribute "config_key"
+     */
+    public function testPropertyConfigKey()
+    {
+    }
+
+    /**
+     * Test attribute "url"
+     */
+    public function testPropertyUrl()
+    {
+    }
+
+    /**
+     * Test attribute "version"
+     */
+    public function testPropertyVersion()
     {
     }
 }

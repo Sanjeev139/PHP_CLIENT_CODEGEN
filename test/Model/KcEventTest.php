@@ -1,6 +1,6 @@
 <?php
 /**
- * BillingAddressTest
+ * KcEventTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace PhpApi;
 
 /**
- * BillingAddressTest Class Doc Comment
+ * KcEventTest Class Doc Comment
  *
  * @category    Class
- * @description BillingAddress
+ * @description Kount Central Event class description &lt;br /&gt;&lt;b&gt;Author:&lt;/b&gt; Kount &lt;a&gt;custserv@kount.com&lt;/a&gt;;&lt;br /&gt;&lt;b&gt;Version:&lt;/b&gt; 7.0.0. &lt;br /&gt;&lt;b&gt;Copyright:&lt;/b&gt; 2014 Keynetics Inc &lt;br /&gt;
  * @package     PhpApi
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BillingAddressTest extends \PHPUnit_Framework_TestCase
+class KcEventTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,65 +70,30 @@ class BillingAddressTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "BillingAddress"
+     * Test "KcEvent"
      */
-    public function testBillingAddress()
+    public function testKcEvent()
     {
     }
 
     /**
-     * Test attribute "address1"
+     * Test attribute "code"
      */
-    public function testPropertyAddress1()
+    public function testPropertyCode()
     {
     }
 
     /**
-     * Test attribute "address2"
+     * Test attribute "expression"
      */
-    public function testPropertyAddress2()
+    public function testPropertyExpression()
     {
     }
 
     /**
-     * Test attribute "city"
+     * Test attribute "decision"
      */
-    public function testPropertyCity()
-    {
-    }
-
-    /**
-     * Test attribute "state"
-     */
-    public function testPropertyState()
-    {
-    }
-
-    /**
-     * Test attribute "postal_code"
-     */
-    public function testPropertyPostalCode()
-    {
-    }
-
-    /**
-     * Test attribute "country"
-     */
-    public function testPropertyCountry()
-    {
-    }
-
-    /**
-     * Test attribute "premise"
-     */
-    public function testPropertyPremise()
-    {
-    }
-
-    /**
-     * Test attribute "street"
-     */
-    public function testPropertyStreet()
+    public function testPropertyDecision()
     {
     }
 }

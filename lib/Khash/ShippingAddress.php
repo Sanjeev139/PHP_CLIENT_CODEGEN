@@ -62,7 +62,9 @@ class ShippingAddress implements ModelInterface, ArrayAccess
         'city' => 'string',
         'state' => 'string',
         'postal_code' => 'string',
-        'country' => 'string'
+        'country' => 'string',
+        'premise' => 'string',
+        'street' => 'string'
     ];
 
     /**
@@ -76,7 +78,9 @@ class ShippingAddress implements ModelInterface, ArrayAccess
         'city' => null,
         'state' => null,
         'postal_code' => null,
-        'country' => null
+        'country' => null,
+        'premise' => null,
+        'street' => null
     ];
 
     /**
@@ -111,7 +115,9 @@ class ShippingAddress implements ModelInterface, ArrayAccess
         'city' => 'city',
         'state' => 'state',
         'postal_code' => 'postalCode',
-        'country' => 'country'
+        'country' => 'country',
+        'premise' => 'premise',
+        'street' => 'street'
     ];
 
     /**
@@ -125,7 +131,9 @@ class ShippingAddress implements ModelInterface, ArrayAccess
         'city' => 'setCity',
         'state' => 'setState',
         'postal_code' => 'setPostalCode',
-        'country' => 'setCountry'
+        'country' => 'setCountry',
+        'premise' => 'setPremise',
+        'street' => 'setStreet'
     ];
 
     /**
@@ -139,7 +147,9 @@ class ShippingAddress implements ModelInterface, ArrayAccess
         'city' => 'getCity',
         'state' => 'getState',
         'postal_code' => 'getPostalCode',
-        'country' => 'getCountry'
+        'country' => 'getCountry',
+        'premise' => 'getPremise',
+        'street' => 'getStreet'
     ];
 
     /**
@@ -208,6 +218,8 @@ class ShippingAddress implements ModelInterface, ArrayAccess
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['postal_code'] = isset($data['postal_code']) ? $data['postal_code'] : null;
         $this->container['country'] = isset($data['country']) ? $data['country'] : null;
+        $this->container['premise'] = isset($data['premise']) ? $data['premise'] : null;
+        $this->container['street'] = isset($data['street']) ? $data['street'] : null;
     }
 
     /**
@@ -374,6 +386,54 @@ class ShippingAddress implements ModelInterface, ArrayAccess
     public function setCountry($country)
     {
         $this->container['country'] = $country;
+
+        return $this;
+    }
+
+    /**
+     * Gets premise
+     *
+     * @return string
+     */
+    public function getPremise()
+    {
+        return $this->container['premise'];
+    }
+
+    /**
+     * Sets premise
+     *
+     * @param string $premise premise
+     *
+     * @return $this
+     */
+    public function setPremise($premise)
+    {
+        $this->container['premise'] = $premise;
+
+        return $this;
+    }
+
+    /**
+     * Gets street
+     *
+     * @return string
+     */
+    public function getStreet()
+    {
+        return $this->container['street'];
+    }
+
+    /**
+     * Sets street
+     *
+     * @param string $street street
+     *
+     * @return $this
+     */
+    public function setStreet($street)
+    {
+        $this->container['street'] = $street;
 
         return $this;
     }

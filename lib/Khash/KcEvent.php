@@ -1,6 +1,6 @@
 <?php
 /**
- * BillingAddress
+ * KcEvent
  *
  * PHP version 5
  *
@@ -33,14 +33,15 @@ use \ArrayAccess;
 use \PhpApi\ObjectSerializer;
 
 /**
- * BillingAddress Class Doc Comment
+ * KcEvent Class Doc Comment
  *
  * @category Class
+ * @description Kount Central Event class description &lt;br /&gt;&lt;b&gt;Author:&lt;/b&gt; Kount &lt;a&gt;custserv@kount.com&lt;/a&gt;;&lt;br /&gt;&lt;b&gt;Version:&lt;/b&gt; 7.0.0. &lt;br /&gt;&lt;b&gt;Copyright:&lt;/b&gt; 2014 Keynetics Inc &lt;br /&gt;
  * @package  PhpApi
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class BillingAddress implements ModelInterface, ArrayAccess
+class KcEvent implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +50,7 @@ class BillingAddress implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'BillingAddress';
+    protected static $swaggerModelName = 'KcEvent';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,14 +58,9 @@ class BillingAddress implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address1' => 'string',
-        'address2' => 'string',
-        'city' => 'string',
-        'state' => 'string',
-        'postal_code' => 'string',
-        'country' => 'string',
-        'premise' => 'string',
-        'street' => 'string'
+        'code' => 'string',
+        'expression' => 'string',
+        'decision' => 'string'
     ];
 
     /**
@@ -73,14 +69,9 @@ class BillingAddress implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'address1' => null,
-        'address2' => null,
-        'city' => null,
-        'state' => null,
-        'postal_code' => null,
-        'country' => null,
-        'premise' => null,
-        'street' => null
+        'code' => null,
+        'expression' => null,
+        'decision' => null
     ];
 
     /**
@@ -110,14 +101,9 @@ class BillingAddress implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'address1' => 'address1',
-        'address2' => 'address2',
-        'city' => 'city',
-        'state' => 'state',
-        'postal_code' => 'postalCode',
-        'country' => 'country',
-        'premise' => 'premise',
-        'street' => 'street'
+        'code' => 'Code',
+        'expression' => 'Expression',
+        'decision' => 'Decision'
     ];
 
     /**
@@ -126,14 +112,9 @@ class BillingAddress implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'address1' => 'setAddress1',
-        'address2' => 'setAddress2',
-        'city' => 'setCity',
-        'state' => 'setState',
-        'postal_code' => 'setPostalCode',
-        'country' => 'setCountry',
-        'premise' => 'setPremise',
-        'street' => 'setStreet'
+        'code' => 'setCode',
+        'expression' => 'setExpression',
+        'decision' => 'setDecision'
     ];
 
     /**
@@ -142,14 +123,9 @@ class BillingAddress implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'address1' => 'getAddress1',
-        'address2' => 'getAddress2',
-        'city' => 'getCity',
-        'state' => 'getState',
-        'postal_code' => 'getPostalCode',
-        'country' => 'getCountry',
-        'premise' => 'getPremise',
-        'street' => 'getStreet'
+        'code' => 'getCode',
+        'expression' => 'getExpression',
+        'decision' => 'getDecision'
     ];
 
     /**
@@ -212,14 +188,9 @@ class BillingAddress implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['address1'] = isset($data['address1']) ? $data['address1'] : null;
-        $this->container['address2'] = isset($data['address2']) ? $data['address2'] : null;
-        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
-        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
-        $this->container['postal_code'] = isset($data['postal_code']) ? $data['postal_code'] : null;
-        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
-        $this->container['premise'] = isset($data['premise']) ? $data['premise'] : null;
-        $this->container['street'] = isset($data['street']) ? $data['street'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['expression'] = isset($data['expression']) ? $data['expression'] : null;
+        $this->container['decision'] = isset($data['decision']) ? $data['decision'] : null;
     }
 
     /**
@@ -247,193 +218,73 @@ class BillingAddress implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets address1
+     * Gets code
      *
      * @return string
      */
-    public function getAddress1()
+    public function getCode()
     {
-        return $this->container['address1'];
+        return $this->container['code'];
     }
 
     /**
-     * Sets address1
+     * Sets code
      *
-     * @param string $address1 address1
+     * @param string $code Gets the threshold event code
      *
      * @return $this
      */
-    public function setAddress1($address1)
+    public function setCode($code)
     {
-        $this->container['address1'] = $address1;
+        $this->container['code'] = $code;
 
         return $this;
     }
 
     /**
-     * Gets address2
+     * Gets expression
      *
      * @return string
      */
-    public function getAddress2()
+    public function getExpression()
     {
-        return $this->container['address2'];
+        return $this->container['expression'];
     }
 
     /**
-     * Sets address2
+     * Sets expression
      *
-     * @param string $address2 address2
+     * @param string $expression Gets the threshold event expression
      *
      * @return $this
      */
-    public function setAddress2($address2)
+    public function setExpression($expression)
     {
-        $this->container['address2'] = $address2;
+        $this->container['expression'] = $expression;
 
         return $this;
     }
 
     /**
-     * Gets city
+     * Gets decision
      *
      * @return string
      */
-    public function getCity()
+    public function getDecision()
     {
-        return $this->container['city'];
+        return $this->container['decision'];
     }
 
     /**
-     * Sets city
+     * Sets decision
      *
-     * @param string $city city
+     * @param string $decision Gets the threshold event decision
      *
      * @return $this
      */
-    public function setCity($city)
+    public function setDecision($decision)
     {
-        $this->container['city'] = $city;
-
-        return $this;
-    }
-
-    /**
-     * Gets state
-     *
-     * @return string
-     */
-    public function getState()
-    {
-        return $this->container['state'];
-    }
-
-    /**
-     * Sets state
-     *
-     * @param string $state state
-     *
-     * @return $this
-     */
-    public function setState($state)
-    {
-        $this->container['state'] = $state;
-
-        return $this;
-    }
-
-    /**
-     * Gets postal_code
-     *
-     * @return string
-     */
-    public function getPostalCode()
-    {
-        return $this->container['postal_code'];
-    }
-
-    /**
-     * Sets postal_code
-     *
-     * @param string $postal_code postal_code
-     *
-     * @return $this
-     */
-    public function setPostalCode($postal_code)
-    {
-        $this->container['postal_code'] = $postal_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets country
-     *
-     * @return string
-     */
-    public function getCountry()
-    {
-        return $this->container['country'];
-    }
-
-    /**
-     * Sets country
-     *
-     * @param string $country country
-     *
-     * @return $this
-     */
-    public function setCountry($country)
-    {
-        $this->container['country'] = $country;
-
-        return $this;
-    }
-
-    /**
-     * Gets premise
-     *
-     * @return string
-     */
-    public function getPremise()
-    {
-        return $this->container['premise'];
-    }
-
-    /**
-     * Sets premise
-     *
-     * @param string $premise premise
-     *
-     * @return $this
-     */
-    public function setPremise($premise)
-    {
-        $this->container['premise'] = $premise;
-
-        return $this;
-    }
-
-    /**
-     * Gets street
-     *
-     * @return string
-     */
-    public function getStreet()
-    {
-        return $this->container['street'];
-    }
-
-    /**
-     * Sets street
-     *
-     * @param string $street street
-     *
-     * @return $this
-     */
-    public function setStreet($street)
-    {
-        $this->container['street'] = $street;
+        $this->container['decision'] = $decision;
 
         return $this;
     }

@@ -77,16 +77,23 @@ class ResponseModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ris_response"
+     * Test attribute "get_response"
      */
-    public function testPropertyRisResponse()
+    public function testPropertyGetResponse()
     {
     }
 
     /**
-     * Test attribute "ris_vers"
+     * Test attribute "ris_error_code"
      */
-    public function testPropertyRisVers()
+    public function testPropertyRisErrorCode()
+    {
+    }
+
+    /**
+     * Test attribute "ris_version"
+     */
+    public function testPropertyRisVersion()
     {
     }
 
@@ -98,23 +105,30 @@ class ResponseModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ris_merc"
+     * Test attribute "ris_transaction_id"
      */
-    public function testPropertyRisMerc()
+    public function testPropertyRisTransactionId()
     {
     }
 
     /**
-     * Test attribute "ris_sess"
+     * Test attribute "ris_merchant_id"
      */
-    public function testPropertyRisSess()
+    public function testPropertyRisMerchantId()
     {
     }
 
     /**
-     * Test attribute "ris_ordr"
+     * Test attribute "ris_session_id"
      */
-    public function testPropertyRisOrdr()
+    public function testPropertyRisSessionId()
+    {
+    }
+
+    /**
+     * Test attribute "ris_order_number"
+     */
+    public function testPropertyRisOrderNumber()
     {
     }
 
@@ -126,9 +140,30 @@ class ResponseModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ris_scor"
+     * Test attribute "ris_reason"
      */
-    public function testPropertyRisScor()
+    public function testPropertyRisReason()
+    {
+    }
+
+    /**
+     * Test attribute "ris_reason_code"
+     */
+    public function testPropertyRisReasonCode()
+    {
+    }
+
+    /**
+     * Test attribute "ris_score"
+     */
+    public function testPropertyRisScore()
+    {
+    }
+
+    /**
+     * Test attribute "ris_omniscore"
+     */
+    public function testPropertyRisOmniscore()
     {
     }
 
@@ -140,51 +175,9 @@ class ResponseModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ris_brnd"
+     * Test attribute "ris_brand"
      */
-    public function testPropertyRisBrnd()
-    {
-    }
-
-    /**
-     * Test attribute "ris_regn"
-     */
-    public function testPropertyRisRegn()
-    {
-    }
-
-    /**
-     * Test attribute "ris_netw"
-     */
-    public function testPropertyRisNetw()
-    {
-    }
-
-    /**
-     * Test attribute "ris_kapt"
-     */
-    public function testPropertyRisKapt()
-    {
-    }
-
-    /**
-     * Test attribute "ris_cards"
-     */
-    public function testPropertyRisCards()
-    {
-    }
-
-    /**
-     * Test attribute "ris_devices"
-     */
-    public function testPropertyRisDevices()
-    {
-    }
-
-    /**
-     * Test attribute "ris_emails"
-     */
-    public function testPropertyRisEmails()
+    public function testPropertyRisBrand()
     {
     }
 
@@ -203,37 +196,16 @@ class ResponseModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ris_site"
+     * Test attribute "ris_network"
      */
-    public function testPropertyRisSite()
+    public function testPropertyRisNetwork()
     {
     }
 
     /**
-     * Test attribute "ris_device_layers"
+     * Test attribute "ris_know_your_customer"
      */
-    public function testPropertyRisDeviceLayers()
-    {
-    }
-
-    /**
-     * Test attribute "ris_fingerprint"
-     */
-    public function testPropertyRisFingerprint()
-    {
-    }
-
-    /**
-     * Test attribute "ris_timezone"
-     */
-    public function testPropertyRisTimezone()
-    {
-    }
-
-    /**
-     * Test attribute "ris_localtime"
-     */
-    public function testPropertyRisLocaltime()
+    public function testPropertyRisKnowYourCustomer()
     {
     }
 
@@ -245,9 +217,9 @@ class ResponseModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ris_country"
+     * Test attribute "ris_kaptcha"
      */
-    public function testPropertyRisCountry()
+    public function testPropertyRisKaptcha()
     {
     }
 
@@ -259,23 +231,9 @@ class ResponseModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ris_javascript"
+     * Test attribute "ris_emails"
      */
-    public function testPropertyRisJavascript()
-    {
-    }
-
-    /**
-     * Test attribute "ris_flash"
-     */
-    public function testPropertyRisFlash()
-    {
-    }
-
-    /**
-     * Test attribute "ris_cookies"
-     */
-    public function testPropertyRisCookies()
+    public function testPropertyRisEmails()
     {
     }
 
@@ -287,23 +245,37 @@ class ResponseModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ris_language"
+     * Test attribute "ris_time_zone"
      */
-    public function testPropertyRisLanguage()
+    public function testPropertyRisTimeZone()
     {
     }
 
     /**
-     * Test attribute "ris_mobile_device"
+     * Test attribute "ris_cards"
      */
-    public function testPropertyRisMobileDevice()
+    public function testPropertyRisCards()
     {
     }
 
     /**
-     * Test attribute "ris_mobile_type"
+     * Test attribute "ris_pc_remote"
      */
-    public function testPropertyRisMobileType()
+    public function testPropertyRisPcRemote()
+    {
+    }
+
+    /**
+     * Test attribute "ris_devices"
+     */
+    public function testPropertyRisDevices()
+    {
+    }
+
+    /**
+     * Test attribute "ris_device_layers"
+     */
+    public function testPropertyRisDeviceLayers()
     {
     }
 
@@ -322,58 +294,198 @@ class ResponseModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ris_pc_remote"
+     * Test attribute "ris_local_time"
      */
-    public function testPropertyRisPcRemote()
+    public function testPropertyRisLocalTime()
     {
     }
 
     /**
-     * Test attribute "ris_rules_triggered"
+     * Test attribute "ris_mobile_type"
      */
-    public function testPropertyRisRulesTriggered()
+    public function testPropertyRisMobileType()
     {
     }
 
     /**
-     * Test attribute "ris_counters_triggered"
+     * Test attribute "ris_finger_print"
      */
-    public function testPropertyRisCountersTriggered()
+    public function testPropertyRisFingerPrint()
     {
     }
 
     /**
-     * Test attribute "ris_reason_code"
+     * Test attribute "ris_flash"
      */
-    public function testPropertyRisReasonCode()
+    public function testPropertyRisFlash()
     {
     }
 
     /**
-     * Test attribute "ris_ddfs"
+     * Test attribute "ris_language"
      */
-    public function testPropertyRisDdfs()
+    public function testPropertyRisLanguage()
     {
     }
 
     /**
-     * Test attribute "ris_dsr"
+     * Test attribute "ris_country"
      */
-    public function testPropertyRisDsr()
+    public function testPropertyRisCountry()
     {
     }
 
     /**
-     * Test attribute "ris_uas"
+     * Test attribute "ris_java_script"
      */
-    public function testPropertyRisUas()
+    public function testPropertyRisJavaScript()
     {
     }
 
     /**
-     * Test attribute "ris_browser"
+     * Test attribute "ris_cookies"
      */
-    public function testPropertyRisBrowser()
+    public function testPropertyRisCookies()
+    {
+    }
+
+    /**
+     * Test attribute "ris_mobile_device"
+     */
+    public function testPropertyRisMobileDevice()
+    {
+    }
+
+    /**
+     * Test attribute "ris_site"
+     */
+    public function testPropertyRisSite()
+    {
+    }
+
+    /**
+     * Test attribute "ris_master_card_fraud_score"
+     */
+    public function testPropertyRisMasterCardFraudScore()
+    {
+    }
+
+    /**
+     * Test attribute "ris_pierced_ip_address"
+     */
+    public function testPropertyRisPiercedIpAddress()
+    {
+    }
+
+    /**
+     * Test attribute "ris_pierced_ip_address_latitude"
+     */
+    public function testPropertyRisPiercedIpAddressLatitude()
+    {
+    }
+
+    /**
+     * Test attribute "ris_pierced_ip_address_longitude"
+     */
+    public function testPropertyRisPiercedIpAddressLongitude()
+    {
+    }
+
+    /**
+     * Test attribute "ris_pierced_ip_address_country"
+     */
+    public function testPropertyRisPiercedIpAddressCountry()
+    {
+    }
+
+    /**
+     * Test attribute "ris_pierced_ip_address_region"
+     */
+    public function testPropertyRisPiercedIpAddressRegion()
+    {
+    }
+
+    /**
+     * Test attribute "ris_pierced_ip_address_city"
+     */
+    public function testPropertyRisPiercedIpAddressCity()
+    {
+    }
+
+    /**
+     * Test attribute "ris_pierced_ip_address_organization"
+     */
+    public function testPropertyRisPiercedIpAddressOrganization()
+    {
+    }
+
+    /**
+     * Test attribute "ris_ip_address"
+     */
+    public function testPropertyRisIpAddress()
+    {
+    }
+
+    /**
+     * Test attribute "ris_ip_address_latitude"
+     */
+    public function testPropertyRisIpAddressLatitude()
+    {
+    }
+
+    /**
+     * Test attribute "ris_ip_address_longitude"
+     */
+    public function testPropertyRisIpAddressLongitude()
+    {
+    }
+
+    /**
+     * Test attribute "ris_ip_address_country"
+     */
+    public function testPropertyRisIpAddressCountry()
+    {
+    }
+
+    /**
+     * Test attribute "ris_ip_address_region"
+     */
+    public function testPropertyRisIpAddressRegion()
+    {
+    }
+
+    /**
+     * Test attribute "ris_ip_address_city"
+     */
+    public function testPropertyRisIpAddressCity()
+    {
+    }
+
+    /**
+     * Test attribute "ris_ip_address_organization"
+     */
+    public function testPropertyRisIpAddressOrganization()
+    {
+    }
+
+    /**
+     * Test attribute "ris_date_device_first_seen"
+     */
+    public function testPropertyRisDateDeviceFirstSeen()
+    {
+    }
+
+    /**
+     * Test attribute "ris_user_agent_string"
+     */
+    public function testPropertyRisUserAgentString()
+    {
+    }
+
+    /**
+     * Test attribute "ris_device_screen_resolution"
+     */
+    public function testPropertyRisDeviceScreenResolution()
     {
     }
 
@@ -385,100 +497,37 @@ class ResponseModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ris_pip_ipad"
+     * Test attribute "ris_browser"
      */
-    public function testPropertyRisPipIpad()
+    public function testPropertyRisBrowser()
     {
     }
 
     /**
-     * Test attribute "ris_pip_lat"
+     * Test attribute "ris_to_string"
      */
-    public function testPropertyRisPipLat()
+    public function testPropertyRisToString()
     {
     }
 
     /**
-     * Test attribute "ris_pip_lon"
+     * Test attribute "rules_triggered"
      */
-    public function testPropertyRisPipLon()
+    public function testPropertyRulesTriggered()
     {
     }
 
     /**
-     * Test attribute "ris_pip_country"
+     * Test attribute "ris_number_rules_triggered"
      */
-    public function testPropertyRisPipCountry()
+    public function testPropertyRisNumberRulesTriggered()
     {
     }
 
     /**
-     * Test attribute "ris_pip_region"
+     * Test attribute "ris_warnings"
      */
-    public function testPropertyRisPipRegion()
-    {
-    }
-
-    /**
-     * Test attribute "ris_pip_city"
-     */
-    public function testPropertyRisPipCity()
-    {
-    }
-
-    /**
-     * Test attribute "ris_pip_org"
-     */
-    public function testPropertyRisPipOrg()
-    {
-    }
-
-    /**
-     * Test attribute "ris_ip_ipad"
-     */
-    public function testPropertyRisIpIpad()
-    {
-    }
-
-    /**
-     * Test attribute "ris_ip_lat"
-     */
-    public function testPropertyRisIpLat()
-    {
-    }
-
-    /**
-     * Test attribute "ris_ip_lon"
-     */
-    public function testPropertyRisIpLon()
-    {
-    }
-
-    /**
-     * Test attribute "ris_ip_country"
-     */
-    public function testPropertyRisIpCountry()
-    {
-    }
-
-    /**
-     * Test attribute "ris_ip_region"
-     */
-    public function testPropertyRisIpRegion()
-    {
-    }
-
-    /**
-     * Test attribute "ris_ip_city"
-     */
-    public function testPropertyRisIpCity()
-    {
-    }
-
-    /**
-     * Test attribute "ris_ip_org"
-     */
-    public function testPropertyRisIpOrg()
+    public function testPropertyRisWarnings()
     {
     }
 
@@ -486,6 +535,111 @@ class ResponseModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "ris_warning_count"
      */
     public function testPropertyRisWarningCount()
+    {
+    }
+
+    /**
+     * Test attribute "ris_errors"
+     */
+    public function testPropertyRisErrors()
+    {
+    }
+
+    /**
+     * Test attribute "ris_error_count"
+     */
+    public function testPropertyRisErrorCount()
+    {
+    }
+
+    /**
+     * Test attribute "has_errors"
+     */
+    public function testPropertyHasErrors()
+    {
+    }
+
+    /**
+     * Test attribute "ris_lexis_nexis_cbd_attributes"
+     */
+    public function testPropertyRisLexisNexisCbdAttributes()
+    {
+    }
+
+    /**
+     * Test attribute "ris_lexis_nexis_instant_id_attributes"
+     */
+    public function testPropertyRisLexisNexisInstantIdAttributes()
+    {
+    }
+
+    /**
+     * Test attribute "ris_counters_triggered"
+     */
+    public function testPropertyRisCountersTriggered()
+    {
+    }
+
+    /**
+     * Test attribute "ris_number_counters_triggered"
+     */
+    public function testPropertyRisNumberCountersTriggered()
+    {
+    }
+
+    /**
+     * Test attribute "ris_kount_central_customer_id"
+     */
+    public function testPropertyRisKountCentralCustomerId()
+    {
+    }
+
+    /**
+     * Test attribute "ris_kount_central_warnings"
+     */
+    public function testPropertyRisKountCentralWarnings()
+    {
+    }
+
+    /**
+     * Test attribute "ris_kount_central_warning_count"
+     */
+    public function testPropertyRisKountCentralWarningCount()
+    {
+    }
+
+    /**
+     * Test attribute "ris_kount_central_errors"
+     */
+    public function testPropertyRisKountCentralErrors()
+    {
+    }
+
+    /**
+     * Test attribute "ris_kount_central_error_count"
+     */
+    public function testPropertyRisKountCentralErrorCount()
+    {
+    }
+
+    /**
+     * Test attribute "ris_kount_central_number_thresholds_triggered"
+     */
+    public function testPropertyRisKountCentralNumberThresholdsTriggered()
+    {
+    }
+
+    /**
+     * Test attribute "ris_kount_central_decision"
+     */
+    public function testPropertyRisKountCentralDecision()
+    {
+    }
+
+    /**
+     * Test attribute "kount_central_threshold_events"
+     */
+    public function testPropertyKountCentralThresholdEvents()
     {
     }
 }
